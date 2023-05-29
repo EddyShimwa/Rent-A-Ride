@@ -9,30 +9,29 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Rent-A-Ride ](#-rent-a-ride-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 
 # 📖 Rent-A-Ride <a name="about-project"></a>
 
-**The go-to car rental app that helps you Discover a wide range of vehicles for rent, from compact cars to luxury sedans, available at your convenience. With seamless booking, transparent pricing, and excellent customer service, GoCar makes renting a car a breeze for your travel needs.** 
+**The go-to car rental app that helps you Discover a wide range of vehicles for rent, from compact cars to luxury sedans, available at your convenience. With seamless booking, transparent pricing, and excellent customer service, GoCar makes renting a car a breeze for your travel needs.**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -132,6 +131,12 @@ gem install rspec
 - Twitter: [Eddy](https://twitter.com/eddy56388406)
 - LinkedIn: [Pray Eddy SHIMWA](https://www.linkedin.com/in/eddy-pray-shimwa/)
 
+👤 **Kennedy Owusu**
+
+- GitHub: [@kennedyowusu](https://github.com/kennedyowusu)
+- Twitter: [@_iamkobby](https://twitter.com/_iamkobby)
+- LinkedIn: [Kennedy Owusu](https://www.linkedin.com/in/kennedy-owusu/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -165,7 +170,7 @@ If you like this project star this repository
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
- 
+
 I would like to thank microverse for this opportunity to learn
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
