@@ -17,16 +17,19 @@ export const registerUser = createAsyncThunk(
    );
 
    if (response.status !== 200) {
-    return rejectWithValue(response.data);
-   } else {
-    localStorage.setItem("token", response.data.token);
+    throw new Error(response.data.error);
    }
-   return response.data;
+
+   const token = response.data.jwt;
+   localStorage.setItem("token", token);
+
+   return { user: response.data.user, jwt: token };
   } catch (error) {
-   return rejectWithValue(error.response.data);
+   return rejectWithValue(error.response.error);
   }
  }
 );
+
 const initialState = {
  loading: false,
  error: null,
