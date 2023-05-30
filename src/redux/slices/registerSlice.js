@@ -16,11 +16,11 @@ export const registerUser = createAsyncThunk(
     }
    );
 
-   if (response.status !== 200) {
+   if (response.status !== 201) {
     throw new Error(response.data.error);
    }
 
-   const token = response.data.jwt;
+   const token = response.data.user.jwt;
    localStorage.setItem("token", token);
 
    return { user: response.data.user, jwt: token };

@@ -17,7 +17,6 @@ const Register = () => {
 
   const { success, error } = useSelector(selectRegisterUserState);
 
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -30,7 +29,6 @@ const Register = () => {
       toast.error(error);
     }
   }, [token, navigate, success, user.name, error]);
-
 
   const handleNameChange = (e) => {
   setName(e.target.value);
@@ -54,8 +52,6 @@ const Register = () => {
   setErrors(validationErrors);
 
     if (validationErrors.length === 0) {
-      console.log('Name:', name);
-      console.log('Email:', email);
 
       const registerPayload = {
         name: name,
