@@ -1,0 +1,66 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { post } from "../../constants/axios";
+
+export const registerUser = createAsyncThunk(
+ "user/registerUser",
+ async (data, { rejectWithValue }) => {
+  try {
+   const response = await post("users/", data);
+
+   if (response.status !== 200) {
+    return rejectWithValue(response.data);
+   } else {
+    localStorage.setItem("token", response.data.token);
+   }
+   return response.data;
+  } catch (error) {
+   return rejectWithValue(error.response.data);
+  }
+ }
+);
+const initialState = {
+ loading: false,
+ error: null,
+ success: false,
+ user: {},
+}
+
+const registerSlice = createSlice({
+ name: "register",
+ initialState: initialState,
+
+ reducers: {
+  resetRegister: (state) => {
+   state.loading = false;
+   state.error = null;
+   state.success = false;
+  }
+ },
+
+ extraReducers: {
+  [registerUser.pending]: (state) => {
+   state.loading = true;
+   state.error = null;
+  }
+  ,
+  [registerUser.fulfilled]: (state, { payload }) => {
+   state.loading = false;
+   state.success = true;
+   state.user = payload;
+  }
+  ,
+  [registerUser.rejected]: (state, { payload }) => {
+   state.loading = false;
+   state.error = payload;
+  }
+
+ }
+});
+
+export const { resetRegister } = registerSlice.actions;
+export default registerSlice.reducer;
+
+export const selectRegisterLoading = (state) => state.register.loading;
+export const selectRegisterError = (state) => state.register.error;
+export const selectRegisterSuccess = (state) => state.register.success;
+export const selectRegisterUser = (state) => state.register.user;
