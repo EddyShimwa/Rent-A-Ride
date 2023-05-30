@@ -1,5 +1,6 @@
 import './Login.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -73,7 +74,9 @@ const Login = () => {
             </form>
 
             <div className="login-footer">
-              <p className="login-footer-text">Don&rsquo;t have an account? <a href="#" className="login-footer-link">Sign Up</a></p>
+              <p className="login-footer-text">Don&rsquo;t have an account? <a href="#" className="login-footer-link">
+                <Link to='/register'>Sign Up</Link>
+              </a></p>
               </div>
 
             </div>
