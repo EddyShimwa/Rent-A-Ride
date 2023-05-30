@@ -1,5 +1,5 @@
 import './Login.css'
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -9,13 +9,11 @@ const Login = () => {
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
     setErrors([]);
-    console.log(email);
   }
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
     setErrors([]);
-    console.log(password);
   }
 
   const handleSubmit = (e) => {
@@ -32,6 +30,11 @@ const Login = () => {
 
   const validate = (email, password) => {
     const errors = [];
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      errors.push('Invalid email address');
+    }
 
     if (email.trim() === '') {
       errors.push('Email cannot be empty');
