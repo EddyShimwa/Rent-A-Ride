@@ -46,14 +46,12 @@ const Login = () => {
     setErrors(validationErrors);
 
     if (validationErrors.length === 0) {
-      console.log('Email:', email);
 
       const loginPayload = {
         email: email,
         password: password,
       }
 
-      console.log('Login Payload:', loginPayload);
       dispatch(loginUser(loginPayload));
     }
   };

@@ -6,17 +6,20 @@ export const loginUser = createAsyncThunk(
  async (data, { rejectWithValue }) => {
   try {
    const response = await axios.post(
-    "http://127.0.0.1:3000/login/", data
+    "http://127.0.0.1:3000/login/", data,
+    {
+     headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+     },
+    }
    );
-
-   console.log("response from loginUser slice:", response);
 
    if (response.status !== 202) {
     throw new Error(response.data.error);
    }
 
    const token = response.data.jwt;
-   // const user = response.data.user;
    localStorage.setItem("token", token);
    return response.data;
   } catch (error) {
