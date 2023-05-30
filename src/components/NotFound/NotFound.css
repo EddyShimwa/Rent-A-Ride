@@ -36,7 +36,7 @@
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .not-found-button:focus {
@@ -44,7 +44,7 @@
 }
 
 .not-found-button:hover {
- background: #fff;
+  background: #fff;
   color: #ff5617;
   border: 1px solid #fff;
   transition: 0.5s;
@@ -100,9 +100,8 @@
   }
 }
 
-
 @media screen and (max-width: 320px) {
- .not-found-text {
+  .not-found-text {
     margin-top: 40%;
     font-size: 16px;
   }
