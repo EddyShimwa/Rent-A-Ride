@@ -57,7 +57,6 @@ const loginSlice = createSlice({
    state.loading = false;
    state.error = payload;
   },
-
  }
 });
 

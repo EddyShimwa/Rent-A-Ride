@@ -15,12 +15,13 @@ export const registerUser = createAsyncThunk(
       },
     }
    );
+   console.log(response.data.jwt);
 
    if (response.status !== 201) {
     throw new Error(response.data.error);
    }
 
-   const token = response.data.user.jwt;
+   const token = response.data.jwt;
    localStorage.setItem("token", token);
 
    return { user: response.data.user, jwt: token };
@@ -41,13 +42,7 @@ const registerSlice = createSlice({
  name: "register",
  initialState: initialState,
 
- reducers: {
-  resetRegister: (state) => {
-   state.loading = false;
-   state.error = null;
-   state.success = false;
-  }
- },
+ reducers: {},
 
  extraReducers: {
   [registerUser.pending]: (state) => {
@@ -65,11 +60,9 @@ const registerSlice = createSlice({
    state.loading = false;
    state.error = payload;
   }
-
  }
 });
 
-export const { resetRegister } = registerSlice.actions;
 export default registerSlice.reducer;
 
 export const selectRegisterLoading = (state) => state.register.loading;
