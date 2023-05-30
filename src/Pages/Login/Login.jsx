@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useSelector, useDispatch } from 'react-redux';
 import { loginUser, selectLoginUserState, selectLoginUser } from '../../redux/slices/loginSlice.js';
+import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -39,22 +40,71 @@ const Login = () => {
     setErrors([]);
   }
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   const validationErrors = validate(email, password);
+  //   setErrors(validationErrors);
+
+  //   if (validationErrors.length === 0) {
+  //     console.log('Email:', email);
+
+  //     const loginPayload = {
+  //       email: email,
+  //       password: password,
+  //     }
+
+  //     console.log('Login Payload:', loginPayload);
+  //     dispatch(loginUser(loginPayload));
+  //   }
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const validationErrors = validate(email, password);
     setErrors(validationErrors);
 
     if (validationErrors.length === 0) {
-      console.log('Email:', email);
+      try {
+        const loginPayload = {
+          email: email,
+          password: password,
+        };
 
-      const loginPayload = {
-        email: email,
-        password: password,
+        const response = await axios.post('http://127.0.0.1:3000/login', loginPayload);
+
+        // Process the response data
+        console.log(response.data);
+
+        // Assuming the response contains the token and user data
+        const {
+          user,
+          jwt
+        } = response.data;
+
+        // Store the token in localStorage
+        localStorage.setItem('token', jwt);
+
+        // Dispatch an action or update the state accordingly
+        // dispatch(...)
+
+        // Navigate to the desired route
+        navigate('/');
+
+        // Show a success toast message
+        toast.success(`Welcome ${user.name}!`);
+      } catch (error) {
+        // Handle the error
+        console.error(error);
+
+        // Show an error toast message
+        toast.error('Login failed. Please try again.');
+
+        // Clear the email and password fields
+        setEmail('');
+        setPassword('');
       }
-
-      console.log('Login Payload:', loginPayload);
-      dispatch(loginUser(loginPayload));
     }
   };
 
