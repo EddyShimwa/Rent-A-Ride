@@ -4,11 +4,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useSelector, useDispatch } from 'react-redux';
 import { loginUser, selectLoginUserState, selectLoginUser } from '../../redux/slices/loginSlice.js';
+import Dialog from '../../components/Dialog/Dialog';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
+
+  const [dialogVisible, setDialogVisible] = useState(false);
 
   const token = localStorage.getItem('token');
 
@@ -21,6 +24,7 @@ const Login = () => {
 
   useEffect(() => {
     if (token && success) {
+      setDialogVisible(false);
       navigate('/');
       toast.success(`Welcome ${user.name}!`);
     } else {
@@ -46,6 +50,7 @@ const Login = () => {
     setErrors(validationErrors);
 
     if (validationErrors.length === 0) {
+      setDialogVisible(true);
 
       const loginPayload = {
         email: email,
@@ -101,6 +106,10 @@ const Login = () => {
 
               <button className="login-button">Login</button>
             </form>
+
+            {dialogVisible && !error && (
+                <Dialog message="Loading..." isLoading={true} />
+              )}
 
             <div className="login-footer">
               <p className="login-footer-text">Don&rsquo;t have an account? <a href="#" className="login-footer-link">

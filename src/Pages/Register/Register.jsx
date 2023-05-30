@@ -4,12 +4,14 @@ import './Register.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { registerUser, selectRegisterUserState } from '../../redux/slices/registerSlice.js';
 import { toast } from 'react-toastify';
+import Dialog from '../../components/Dialog/Dialog';
 
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
+  const [dialogVisible, setDialogVisible] = useState(false);
 
   const token = localStorage.getItem('token');
 
@@ -22,6 +24,7 @@ const Register = () => {
 
   useEffect(() => {
     if (token && success) {
+      setDialogVisible(false);
       navigate('/');
       toast.success(`Welcome ${user.name}!`);
     } else {
@@ -52,7 +55,7 @@ const Register = () => {
   setErrors(validationErrors);
 
     if (validationErrors.length === 0) {
-
+      setDialogVisible(true);
       const registerPayload = {
         name: name,
         email: email,
@@ -93,10 +96,10 @@ const Register = () => {
           <div className="image-overlay-content">
             <h1 className="register-title">Sign Up</h1>
             <p className='register-paragraph'>Hello there! Sign up and start <br /> managing your system</p>
-           <form className="register-form" onSubmit={handleSubmit}>
-             <input type="text" placeholder="John Doe" className="register-input" value={name} onChange={
-              handleNameChange
-             } />
+            <form className="register-form" onSubmit={handleSubmit}>
+              <input type="text" placeholder="John Doe" className="register-input" value={name} onChange={
+                handleNameChange
+              } />
 
               <input type="text" placeholder="email@microverse.com" className="register-input" value={email} onChange={
                 handleEmailChange
@@ -115,6 +118,10 @@ const Register = () => {
 
               <button className="register-button">Register</button>
             </form>
+
+            {dialogVisible && !error && (
+              <Dialog message="Registering user..." isLoading={true} />
+            )}
 
             <div className="register-footer">
               <p className="register-footer-text">Already have an account? <a href="#" className="register-footer-link">
