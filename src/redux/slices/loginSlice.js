@@ -5,21 +5,8 @@ export const loginUser = createAsyncThunk(
  "user/loginUser",
  async (data, { rejectWithValue }) => {
   try {
-   console.log('user:', data);
-
    const response = await axios.post(
-    "http://127.0.0.1:3000/login/",
-
-    {
-     data: {
-      email: data.email,
-      password: data.password,
-     },
-     headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-     },
-    }
+    "http://127.0.0.1:3000/login/", data
    );
 
    console.log("response from loginUser slice:", response);
@@ -28,6 +15,9 @@ export const loginUser = createAsyncThunk(
     throw new Error(response.data.error);
    }
 
+   const token = response.data.jwt;
+   // const user = response.data.user;
+   localStorage.setItem("token", token);
    return response.data;
   } catch (error) {
    return rejectWithValue(error.response.data);
@@ -46,13 +36,7 @@ const loginSlice = createSlice({
  name: "login",
  initialState: initialState,
 
- reducers: {
-  resetLogin: (state) => {
-   state.loading = false;
-   state.error = null;
-   state.success = false;
-  }
- },
+ reducers: {},
 
  extraReducers: {
   [loginUser.pending]: (state) => {
@@ -74,7 +58,6 @@ const loginSlice = createSlice({
  }
 });
 
-export const { resetLogin } = loginSlice.actions;
 export default loginSlice.reducer;
 
 export const selectLoginLoading = (state) => state.login.loading;
