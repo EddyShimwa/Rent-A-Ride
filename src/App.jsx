@@ -1,8 +1,8 @@
-import Login from './components/Login/Login'
-import Register from './components/Register/Register'
-import Home from './components/Home/Home';
+import Login from './Pages/Login/Login'
+import Register from './Pages/Register/Register'
+import Home from './Pages/Home/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NotFound from './components/NotFound/NotFound';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
 
