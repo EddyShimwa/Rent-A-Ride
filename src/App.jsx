@@ -1,14 +1,11 @@
-import './App.css'
+import Login from './components/Login/Login'
 
 function App() {
 
   return (
-    <>
-      <div className="md:text-center">
-        This text will be centered on medium screens, but revert back
-        to the default (left-aligned) at all other screen sizes.
-      </div>
-    </>
+    <div className=']'>
+      <Login />
+    </div>
   )
 }
 
