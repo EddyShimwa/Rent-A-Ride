@@ -73,7 +73,7 @@ const Login = () => {
             </form>
 
             <div className="login-footer">
-              <p className="login-footer-text">Don't have an account? <a href="#" className="login-footer-link">Sign Up</a></p>
+              <p className="login-footer-text">Don&rsquo;t have an account? <a href="#" className="login-footer-link">Sign Up</a></p>
               </div>
 
             </div>
