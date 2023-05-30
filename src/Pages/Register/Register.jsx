@@ -1,63 +1,94 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './Register.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { registerUser, selectRegisterUserState } from '../../redux/slices/registerSlice.js';
+import { toast } from 'react-toastify';
 
 const Register = () => {
- const [name, setName] = useState('');
- const [email, setEmail] = useState('');
- const [password, setPassword] = useState('');
- const [errors, setErrors] = useState([]);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState([]);
 
- const handleNameChange = (e) => {
+  const token = localStorage.getItem('token');
+
+  const user = useSelector((state) => state.register.user);
+
+  const { success, error } = useSelector(selectRegisterUserState);
+
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (token && success) {
+      navigate('/');
+      toast.success(`Welcome ${user.name}!`);
+    } else {
+      navigate('/register');
+      toast.error(error);
+    }
+  }, [token, navigate, success, user.name, error]);
+
+
+  const handleNameChange = (e) => {
   setName(e.target.value);
   setErrors([]);
- }
+  }
 
- const handleEmailChange = (e) => {
+  const handleEmailChange = (e) => {
   setEmail(e.target.value);
   setErrors([]);
- }
+  }
 
- const handlePasswordChange = (e) => {
+  const handlePasswordChange = (e) => {
   setPassword(e.target.value);
   setErrors([]);
- }
+  }
 
- const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
   e.preventDefault();
 
   const validationErrors = validate(name, email, password);
   setErrors(validationErrors);
 
-  if (validationErrors.length === 0) {
-   console.log('Name:', name);
-   console.log('Email:', email);
+    if (validationErrors.length === 0) {
+      console.log('Name:', name);
+      console.log('Email:', email);
 
-  }
- };
+      const registerPayload = {
+        name: name,
+        email: email,
+        password: password,
+      };
 
- const validate = (name, email, password) => {
+      dispatch(registerUser(registerPayload));
+    }
+  };
+
+  const validate = (name, email, password) => {
   const errors = [];
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-   errors.push('Invalid email address');
+    errors.push('Invalid email address');
   }
 
   if (email.trim() === '') {
-   errors.push('Email cannot be empty');
+    errors.push('Email cannot be empty');
   }
 
   if (password.trim() === '') {
-   errors.push('Password cannot be empty');
+    errors.push('Password cannot be empty');
   }
 
   if (name.trim() === '') {
-   errors.push('Name cannot be empty');
+    errors.push('Name cannot be empty');
   }
 
   return errors;
- };
+  };
 
   return (
     <div className="">
