@@ -1,25 +1,19 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { post } from "../../constants/axios";
 import axios from "axios";
 
 export const registerUser = createAsyncThunk(
  "user/registerUser",
  async (user, { rejectWithValue }) => {
   try {
-   // const response = await post("users/", data);
    const response = await axios.post(
     "http://127.0.0.1:3000/users",
-
     {
       user,
       headers: {
        "Content-Type": "application/json",
        "Accept": "application/json",
-       // Authorization: "Bearer " + localStorage.getItem("token"),
       },
     }
-
-
    );
 
    if (response.status !== 200) {
