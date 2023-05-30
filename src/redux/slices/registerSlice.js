@@ -58,7 +58,7 @@ const registerSlice = createSlice({
   [registerUser.fulfilled]: (state, { payload }) => {
    state.loading = false;
    state.success = true;
-   state.user = payload;
+   state.user = payload.user;
   }
   ,
   [registerUser.rejected]: (state, { payload }) => {

@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import registerSlice from './slices/registerSlice';
+import loginSlice from './slices/loginSlice';
 
 const store = configureStore({
   reducer: {
-    // Define a top-level state field named `todos`, handled by `todosReducer`
-    // login: loginSlice,
+    login: loginSlice,
     register: registerSlice,
   }
 });
