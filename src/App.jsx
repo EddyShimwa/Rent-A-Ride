@@ -1,8 +1,12 @@
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
-import Home from './components/Home/Home';
+import Dashboard from './Pages/Dashboard.jsx/Dashboard';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NotFound from './components/NotFound/NotFound';
+import AllRides from './Pages/AllRides';
+import Favorites from './Pages/Favorites';
+import AddRide from './Pages/AddRide';
+import DeleteRide from './Pages/DeleteRide';
 
 function App() {
 
@@ -10,9 +14,13 @@ function App() {
     <div className=''>
       <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Dashboard />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/my-ride' element={<AllRides />} />
+          <Route path='/favorite' element={<Favorites />} />
+          <Route path='/add-ride' element={<AddRide />} />
+          <Route path='/delete-ride' element={<DeleteRide />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
