@@ -1,12 +1,20 @@
 import Login from './components/Login/Login'
 import Register from './components/Register/Register'
 import Dashboard from './Pages/Dashboard.jsx/Dashboard';
+import Login from './Pages/Login/Login'
+import Register from './Pages/Register/Register'
+import Home from './Pages/Home/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NotFound from './components/NotFound/NotFound';
 import AllRides from './Pages/AllRides';
 import Favorites from './Pages/Favorites';
 import AddRide from './Pages/AddRide';
 import DeleteRide from './Pages/DeleteRide';
+import Login from './Pages/Login/Login'
+import Register from './Pages/Register/Register'
+import Home from './Pages/Home/Home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
 
