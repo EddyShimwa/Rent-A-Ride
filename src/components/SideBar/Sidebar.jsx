@@ -12,45 +12,44 @@ import { CgClose } from 'react-icons/cg'
 const Sidebar = () => {
   const [show, setShow] = useState(false);
 
+  const navLinkClass = 'nav-link';
+  const navLinkIconClass = 'nav-link-icon';
+
   return (
-    <main className={show ? 'space-toggle' : null}>
-      <header className={`header ${show ? 'space-toggle' : null}`}>
+    <main className={`${show && 'space-toggle'}`}>
+      <header className={`header ${show && 'space-toggle'}`}>
         <div className='header-toggle' onClick={() => setShow(!show)}>
-          {show ? <CgClose className='header-toggle-icon' /> : <SlMenu className='header-toggle-icon' />}
+          {show ? <CgClose className={navLinkIconClass} /> : <SlMenu className={navLinkIconClass} />}
         </div>
       </header>
 
-      <aside className={`sidebar ${show ? 'show' : null}`}>
+      <aside className={`sidebar ${show && 'show'}`}>
         <nav className='nav'>
-          {/* if show is true hide the profile logo */}
-          {
-            !show ? <div className='profile'></div> : <div className='profile-logo'></div>
-          }
-          {/* <div className='profile-logo'></div> */}
+          {!show ? <div className='profile'></div> : <div className='profile-logo'></div>}
           <div className='sidebar-items-container'>
-            <Link to='/my-ride' className='nav-logo active'>
-              <AiFillCar className='nav-link-icon' />
-              <span className='nav-logo-name'>My Rides</span>
-            </Link>
-
             <div className='nav-list'>
-              <Link to='/favorite' className='nav-link'>
-                <FaHeart className='nav-link-icon' />
+              <Link to='/my-ride' className={`nav-logo ${navLinkClass} active`}>
+                <AiFillCar className={navLinkIconClass} />
+                <span className='nav-logo-name'>My Rides</span>
+              </Link>
+
+              <Link to='/favorite' className={`${navLinkClass}`}>
+                <FaHeart className={navLinkIconClass} />
                 <span className='nav-link-name'>My Favorite</span>
               </Link>
-              <Link to='/add-ride' className='nav-link'>
-                <BiImageAdd className='nav-link-icon' />
+              <Link to='/add-ride' className={`${navLinkClass}`}>
+                <BiImageAdd className={navLinkIconClass} />
                 <span className='nav-link-name'>Add Ride</span>
               </Link>
-              <Link to='/delete-ride' className='nav-link'>
-                <AiFillDelete className='nav-link-icon' />
+              <Link to='/delete-ride' className={`${navLinkClass}`}>
+                <AiFillDelete className={navLinkIconClass} />
                 <span className='nav-link-name'>Delete Ride</span>
               </Link>
             </div>
           </div>
 
-          <Link to='/login' className='nav-link'>
-            <RiLogoutCircleRLine className='nav-link-icon' />
+          <Link to='/login' className={`${navLinkClass}`}>
+            <RiLogoutCircleRLine className={navLinkIconClass} />
             <span className='nav-link-name'>Logout</span>
           </Link>
         </nav>
@@ -61,4 +60,5 @@ const Sidebar = () => {
   );
 }
 
-export default Sidebar
+export default Sidebar;
+
