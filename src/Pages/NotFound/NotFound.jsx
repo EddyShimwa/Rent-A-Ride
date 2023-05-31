@@ -10,8 +10,8 @@ const NotFound = () => {
     </p>
 
     <button className='not-found-button'>
-     <a href="">
-      <Link to='/'>Go To Homepage</Link>
+      <a href="">
+        <Link to='/'>Go To Homepage</Link>
       </a>
     </button>
     </div>
