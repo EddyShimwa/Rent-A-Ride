@@ -4,6 +4,8 @@ import './Register.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { registerUser, selectRegisterUserState } from '../../redux/slices/registerSlice.js';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Dialog from '../../components/Dialog/Dialog';
 
 const Register = () => {
