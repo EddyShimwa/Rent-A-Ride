@@ -53,10 +53,37 @@ main {
   transition: 0.5s;
 }
 
+.profile-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border: 2px solid var(--first-color-alt);
+  margin-bottom: -25rem;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--first-color-alt);
+  margin-bottom: -25rem;
+}
+
 .sidebar-items-container {
   display: flex;
   flex-direction: column;
-  padding-top: 10rem;
+  padding-top: -45rem;
 }
 
 .nav {

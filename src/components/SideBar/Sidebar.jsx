@@ -22,8 +22,12 @@ const Sidebar = () => {
 
       <aside className={`sidebar ${show ? 'show' : null}`}>
         <nav className='nav'>
+          {/* if show is true hide the profile logo */}
+          {
+            !show ? <div className='profile'></div> : <div className='profile-logo'></div>
+          }
+          {/* <div className='profile-logo'></div> */}
           <div className='sidebar-items-container'>
-
             <Link to='/my-ride' className='nav-logo active'>
               <AiFillCar className='nav-link-icon' />
               <span className='nav-logo-name'>My Rides</span>
