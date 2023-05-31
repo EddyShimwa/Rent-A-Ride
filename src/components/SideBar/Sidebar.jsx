@@ -8,6 +8,7 @@ import { AiFillCar } from 'react-icons/ai'
 import { RiLogoutCircleRLine } from 'react-icons/ri'
 import { AiFillDelete } from 'react-icons/ai'
 import { CgClose } from 'react-icons/cg'
+import AllRides from '../../Pages/AllRides';
 
 const Sidebar = () => {
   const [show, setShow] = useState(false);
@@ -55,7 +56,7 @@ const Sidebar = () => {
         </nav>
       </aside>
 
-      <h1>Content</h1>
+      <AllRides />
     </main>
   );
 }
