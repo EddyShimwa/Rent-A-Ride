@@ -9,6 +9,7 @@ import { RiLogoutCircleRLine } from 'react-icons/ri'
 import { AiFillDelete } from 'react-icons/ai'
 import { CgClose } from 'react-icons/cg'
 import AllRides from '../../Pages/AllRides';
+import { BsSearch } from 'react-icons/bs';
 
 const Sidebar = () => {
   const [show, setShow] = useState(false);
@@ -21,6 +22,10 @@ const Sidebar = () => {
       <header className={`header ${show && 'space-toggle'}`}>
         <div className='header-toggle' onClick={() => setShow(!show)}>
           {show ? <CgClose className={navLinkIconClass} /> : <SlMenu className={navLinkIconClass} />}
+        </div>
+        <p>Houses</p>
+        <div className='header-search'>
+          <BsSearch className='search-icon' />
         </div>
       </header>
 
