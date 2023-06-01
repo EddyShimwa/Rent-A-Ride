@@ -8,6 +8,7 @@ import AddRide from '../../Pages/AddRide';
 import DeleteRide from '../../Pages/DeleteRide';
 import NotFound from '../../Pages/NotFound/NotFound';
 import Sidebar from '../../components/SideBar/Sidebar';
+import DetailsPage from '../../Pages/Details/DetailsPage';
 
 
 const ProjectRouter = () => {
@@ -30,10 +31,12 @@ const ProjectRouter = () => {
               <Route path='/favorite' element={<Favorites />} />
               <Route path='/add-ride' element={<AddRide />} />
               <Route path='/delete-ride' element={<DeleteRide />} />
+
             </Route>
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
               <Route path='*' element={<NotFound />} />
+              <Route path='/ride-details' element={<DetailsPage />} />
           </Routes>
         </Router>
     )
