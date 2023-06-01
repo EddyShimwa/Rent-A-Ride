@@ -2,15 +2,16 @@ import { BsSearch } from 'react-icons/bs';
 import './DetailsPage.css'
 import { HiOutlineChevronLeft, HiOutlineChevronDown } from 'react-icons/hi';
 import ProfileImage from '../../assets/profile-image.png'
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const DetailsPage = () => {
-  const history = useHistory();
 
   return (
     <div className="details-page-container">
       <div className="details-top-section">
-        <HiOutlineChevronLeft className='back-icon' onClick={() => history.goBack()}/>
+        <Link to='/'>
+          <HiOutlineChevronLeft className='back-icon' />
+        </Link>
         <h2 className='details-title'>Beautiful Family Apartment</h2>
         <BsSearch className='search-icon' />
       </div>
