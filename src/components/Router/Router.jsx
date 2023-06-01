@@ -1,4 +1,3 @@
-// import Dashboard from '.../Pages/Dashboard/Dashboard';
 import Dashboard from '../../Pages/Dashboard/Dashboard';
 import Login from '../../Pages/Login/Login'
 import Register from '../../Pages/Register/Register'
