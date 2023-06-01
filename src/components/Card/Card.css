@@ -69,3 +69,259 @@
   color: #555;
   font-weight: bold;
 }
+
+
+/* Media Query */
+
+@media screen and (min-width: 320px) {
+  .card {
+    width: 90vw;
+    height: 50vh;
+    margin: 4.2rem auto;
+  }
+
+  .card-image {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+ .card-price {
+   font-size: 14px;
+   color: #555;
+ }
+
+ .card-rating {
+   font-size: 14px;
+   color: #555;
+   margin-top: 30px;
+ }
+
+ .card-time {
+   font-size: 14px;
+   color: #555;
+   margin-top: 30px;
+ }
+
+}
+
+@media screen and (min-width: 375px) {
+  .card {
+    width: 90vw;
+    height: 50vh;
+    margin: 4.2rem auto;
+  }
+
+  .card-image {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+ .card-price {
+   font-size: 14px;
+   color: #555;
+ }
+
+ .card-rating {
+   font-size: 14px;
+   color: #555;
+   margin-top: 30px;
+ }
+
+ .card-time {
+   font-size: 14px;
+   color: #555;
+   margin-top: 30px;
+ }
+
+}
+
+@media screen and (min-width: 425px) {
+  .card {
+    width: 90vw;
+    height: 50vh;
+    margin: 4.5rem auto;
+  }
+
+  .card-image {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .card-description {
+   font-size: 16px;
+   font-weight: bold;
+   color: #555;
+ }
+
+ .card-price {
+   font-size: 16px;
+   color: #555;
+ }
+
+ .card-rating {
+   font-size: 16px;
+   color: #555;
+ }
+
+ .card-time {
+   font-size: 16px;
+   color: #555;
+ }
+}
+
+@media screen and (min-width: 640px) {
+  .card {
+    width: 60vw;
+    height: 60vh;
+    margin: 5.5rem auto;
+  }
+  .card-image {
+    width: 60vw;
+    height: 50vh;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: center;
+  }
+  .card-rating {
+    font-size: 10px;
+  }
+  .card-time {
+    font-size: 12px;
+  }
+  .card-description {
+    font-size: 12px;
+  }
+
+  .card-description {
+   font-size: 18px;
+   font-weight: bold;
+   color: #555;
+ }
+
+ .card-price {
+   font-size: 18px;
+   color: #555;
+ }
+
+ .card-rating {
+   font-size: 14px;
+   color: #555;
+ }
+
+ .card-time {
+   font-size: 16px;
+   color: #555;
+ }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 60vw;
+    height: 60vh;
+    margin: 5.5rem auto;
+  }
+  .card-image {
+    width: 60vw;
+    height: 50vh;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: center;
+  }
+  .card-rating {
+    font-size: 10px;
+  }
+  .card-time {
+    font-size: 12px;
+  }
+  .card-description {
+    font-size: 12px;
+  }
+
+  .card-description {
+   font-size: 18px;
+   font-weight: bold;
+   color: #555;
+ }
+
+ .card-price {
+   font-size: 18px;
+   color: #555;
+ }
+
+ .card-rating {
+   font-size: 14px;
+   color: #555;
+ }
+
+ .card-time {
+   font-size: 16px;
+   color: #555;
+ }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 40vw;
+    height: 50vh;
+    margin: 5.5rem auto;
+  }
+  .card-image {
+    width: 40vw;
+    height: 40vh;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    text-align: center;
+  }
+  .card-rating {
+    font-size: 10px;
+  }
+  .card-time {
+    font-size: 12px;
+  }
+  .card-description {
+    font-size: 12px;
+  }
+
+  .card-description {
+   font-size: 18px;
+   font-weight: bold;
+   color: #555;
+ }
+
+ .card-price {
+   font-size: 18px;
+   color: #555;
+ }
+
+ .card-rating {
+   font-size: 14px;
+   color: #555;
+ }
+
+ .card-time {
+   font-size: 16px;
+   color: #555;
+ }
+}
