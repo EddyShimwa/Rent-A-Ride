@@ -4,7 +4,7 @@ import Register from '../../Pages/Register/Register'
 import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
 import AllRides from '../../Pages/AllRides';
 import Favorites from '../../Pages/Favorites';
-import AddRide from '../../Pages/AddRide';
+import AddRide from '../../Pages/AddRide/AddRide';
 import DeleteRide from '../../Pages/DeleteRide';
 import NotFound from '../../Pages/NotFound/NotFound';
 import Sidebar from '../../components/SideBar/Sidebar';

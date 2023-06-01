@@ -1,0 +1,65 @@
+.add-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.add-ride-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.add-ride-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.add-car-input {
+  width: 140%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.add-ride-btn {
+  width: 150%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #ff6026;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.add-ride-btn:hover {
+  background-color: #fff;
+  color: #ff6026;
+  transition: 0.5s;
+  border: 1px solid #ff6026;
+}
+
+.add-ride-form .error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  text-align: start;
+}
+
+
+
+
