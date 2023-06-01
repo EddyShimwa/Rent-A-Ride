@@ -1,0 +1,82 @@
+.details-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 100%;
+}
+
+.details-top-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 7%;
+  padding: 0 1rem;
+}
+
+.search-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.details-middle-section {
+  position: relative;
+}
+
+.details-image {
+  height: 55vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image-inner-text {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0 0.2rem;
+}
+
+.left-side {
+  justify-content: flex-start;
+}
+
+.details-profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.details-profile-image {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #f2f2f2;
+}
+
+.details-user-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: left;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+.image-inner-text p {
+  margin: 0 0.5rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
