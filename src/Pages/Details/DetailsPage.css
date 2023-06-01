@@ -139,6 +139,130 @@
 
 /* Media Query */
 
+@media screen and (min-width: 320px) {
+  .details-page-container {
+    height: 100vh;
+  }
+
+  .details-top-section {
+    height: 5%;
+  }
+
+  .details-title {
+    font-size: 1.2rem;
+  }
+
+  .search-icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 0.5rem;
+  }
+
+  .details-middle-section {
+    height: 60%;
+  }
+
+  .details-image {
+    height: 100%;
+  }
+
+  .image-inner-text {
+    top: 80%;
+  }
+
+  .details-profile-image {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .details-user-data {
+    margin-left: 1rem;
+  }
+
+  .details-description-section {
+    height: 30%;
+  }
+
+  .details-description-title {
+    font-size: 1.2rem;
+  }
+
+  .details-page-description {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .details-footer {
+    height: 5%;
+  }
+
+  .details-footer-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .details-page-container {
+    height: 100vh;
+  }
+
+  .details-top-section {
+    height: 5%;
+  }
+
+  .details-title {
+    font-size: 1.2rem;
+  }
+
+  .search-icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 0.5rem;
+  }
+
+  .details-middle-section {
+    height: 60%;
+  }
+
+  .details-image {
+    height: 100%;
+  }
+
+  .image-inner-text {
+    top: 80%;
+  }
+
+  .details-profile-image {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .details-user-data {
+    margin-left: 1rem;
+  }
+
+  .details-description-section {
+    height: 30%;
+  }
+
+  .details-description-title {
+    font-size: 1.2rem;
+  }
+
+  .details-page-description {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .details-footer {
+    height: 5%;
+  }
+
+  .details-footer-text {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (min-width: 425px) {
   .details-page-container {
     height: 100vh;
