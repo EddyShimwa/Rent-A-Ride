@@ -181,29 +181,14 @@
 
 @media screen and (min-width: 640px) {
   .card {
-    width: 60vw;
+    width: 70vw;
     height: 60vh;
-    margin: 5.5rem auto;
+    margin: 4.5rem auto;
   }
+
   .card-image {
-    width: 60vw;
+    width: 70vw;
     height: 50vh;
-  }
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
-    text-align: center;
-  }
-  .card-rating {
-    font-size: 10px;
-  }
-  .card-time {
-    font-size: 12px;
-  }
-  .card-description {
-    font-size: 12px;
   }
 
   .card-description {
