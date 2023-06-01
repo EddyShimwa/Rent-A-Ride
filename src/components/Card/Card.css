@@ -249,29 +249,14 @@
 
 @media screen and (min-width: 1024px) {
   .card {
-    width: 40vw;
-    height: 50vh;
+    width: 80vw;
+    height: 80vh;
     margin: 5.5rem auto;
   }
+
   .card-image {
-    width: 40vw;
-    height: 40vh;
-  }
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
-    text-align: center;
-  }
-  .card-rating {
-    font-size: 10px;
-  }
-  .card-time {
-    font-size: 12px;
-  }
-  .card-description {
-    font-size: 12px;
+    width: 80vw;
+    height: 70vh;
   }
 
   .card-description {
@@ -286,12 +271,12 @@
  }
 
  .card-rating {
-   font-size: 14px;
+   font-size: 18px;
    color: #555;
  }
 
  .card-time {
-   font-size: 16px;
+   font-size: 18px;
    color: #555;
  }
 }
