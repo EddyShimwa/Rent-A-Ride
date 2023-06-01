@@ -160,6 +160,39 @@ main {
     padding-left: calc(var(--nav-width) + 2rem);
   }
 
+  .search-icon {
+    margin-right: 6rem;
+  }
+
+  .sidebar {
+    left: 0;
+    padding: 1rem 0 0 0;
+  }
+
+  .show {
+    width: calc(var(--header-height) + 156px);
+  }
+
+  .space-toggle {
+    padding-left: calc(var(--nav-width) + 188px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding: 0 1rem 0 calc(var(--nav-width) + 2rem);
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1rem);
+    padding-left: calc(var(--nav-width) + 2rem);
+  }
+
+  .search-icon {
+    margin-right: 6rem;
+  }
+
   .sidebar {
     left: 0;
     padding: 1rem 0 0 0;
