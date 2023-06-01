@@ -8,7 +8,6 @@ import { AiFillCar } from 'react-icons/ai'
 import { RiLogoutCircleRLine } from 'react-icons/ri'
 import { AiFillDelete } from 'react-icons/ai'
 import { CgClose } from 'react-icons/cg'
-import AllRides from '../../Pages/AllRides';
 import { BsSearch } from 'react-icons/bs';
 
 const Sidebar = () => {
@@ -18,7 +17,7 @@ const Sidebar = () => {
   const navLinkIconClass = 'nav-link-icon';
 
   return (
-    <main className={`${show && 'space-toggle'}`}>
+      <main className={`${show && 'space-toggle'}`}>
       <header className={`header ${show && 'space-toggle'}`}>
         <div className='header-toggle' onClick={() => setShow(!show)}>
           {show ? <CgClose className={navLinkIconClass} /> : <SlMenu className={navLinkIconClass} />}
@@ -60,9 +59,7 @@ const Sidebar = () => {
           </Link>
         </nav>
       </aside>
-
-      <AllRides />
-    </main>
+      </main>
   );
 }
 
