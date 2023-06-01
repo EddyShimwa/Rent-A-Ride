@@ -11,7 +11,13 @@
   align-items: center;
   justify-content: space-between;
   height: 7%;
-  padding: 0 1rem;
+  padding: 0 0.1rem;
+}
+
+.details-title {
+ color: #555;
+ font-size: 1rem;
+ font-weight: bold;
 }
 
 .search-icon {
@@ -79,4 +85,54 @@
   margin: 0 0.5rem;
   font-weight: 600;
   font-size: 0.8rem;
+}
+
+.details-description-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 30%;
+  padding: 0 1rem;
+}
+
+.details-description-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+  margin-top: 1rem;
+}
+
+.details-page-description {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: #555;
+  text-align: justify;
+  margin-top: 0.5rem;
+}
+
+.details-read-more-icon {
+  margin-top: -0.1rem;
+  margin-bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.details-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 8%;
+  padding: 0 1rem;
+  background-color: #ff6026;
+  margin-top: 0.2rem;
+}
+
+.details-footer-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: white;
 }
