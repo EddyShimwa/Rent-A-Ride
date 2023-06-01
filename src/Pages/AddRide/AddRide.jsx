@@ -1,7 +1,7 @@
 
 const AddRide = () => {
   return (
-    <div>
+    <div className="add-form-container">
       <h1>Add Ride</h1>
     </div>
   )
