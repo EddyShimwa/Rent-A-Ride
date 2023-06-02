@@ -137,6 +137,16 @@
   color: white;
 }
 
+.details-footer-button {
+  background-color: #ff6026;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
 /* Media Query */
 
 @media screen and (min-width: 320px) {
