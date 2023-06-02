@@ -36,20 +36,24 @@
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
 <details>
-  <summary>Client</summary>
+   <summary>React</summary>
   <ul>
-    <li>React.js</li>
+    <li><a href="https://rect.dev/">React</a>The Javascript library for building user interfaces</li>
   </ul>
+  </details>
+  <details>
+   <summary>Redux</summary>
    <ul>
-    <li>Redux</li>
+    <li><a href="https://reduxjs.org/">Redux</a>The predictable state container for Javascript application</li>
   </ul>
+   </details>
+  <details>
+  <summary>Vite </summary>
     <ul>
-    <li>React.jsJavaScript</li>
+     <li><a href="https://vitejs.dev/">Vite</a>The Next Generation Frontend Tooling</li>
   </ul>
-
-</details>
+    </details>
 
 <details>
 <summary>Database</summary>
