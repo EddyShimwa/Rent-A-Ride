@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { BsSearch } from 'react-icons/bs';
 import './DetailsPage.css'
 import { HiOutlineChevronLeft, HiOutlineChevronDown } from 'react-icons/hi';
@@ -5,6 +6,11 @@ import ProfileImage from '../../assets/profile-image.png'
 import { Link } from 'react-router-dom';
 
 const DetailsPage = () => {
+  const [isFavorite, setIsFavorite] = useState(false);
+  
+  const handleAddToFavorites = () => {
+    setIsFavorite(!isFavorite);
+  };
 
   return (
     <div className="details-page-container">
@@ -52,7 +58,9 @@ const DetailsPage = () => {
       </div>
 
       <div className='details-footer'>
-        <p className='details-footer-text'>Add to favorites</p>
+      <button className="details-footer-button" onClick={handleAddToFavorites}>
+          {isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+        </button>
       </div>
 
     </div>
