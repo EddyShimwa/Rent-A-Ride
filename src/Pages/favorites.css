@@ -4,6 +4,7 @@
     width: 100%;
     height: 100%;
     margin: auto;
+    background-color: rgb(250, 246, 245);
 }
 
 .favz-header {
@@ -11,4 +12,41 @@
     margin: auto;  
     text-align: center;
     padding: 2rem;
+}
+
+.favorite-list {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(250, 246, 245);
+}
+
+.car-description {
+    display: flex;
+     justify-items: center;
+}
+.remove {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    background-color: #ff7340;
+    color: white;
+    border: none;
+    padding: 3%;
+    justify-content: center;
+}
+
+.favorite-list-item {
+    border: 1px solid #ec774c;
+    padding: 2%;
+    margin-bottom: 3%;
+}
+
+.car-name {
+    display: flex;
+    justify-content: center;
+    color: #1f1f1f;
 }
