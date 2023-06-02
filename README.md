@@ -112,12 +112,12 @@ To run the project, execute the following command:
   rails server
 ```
 
-### Run tests
+### Run the project
 
-To run tests, run the following command:
+To run this application :
 
 ```sh
-gem install rspec
+npm run dev
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
