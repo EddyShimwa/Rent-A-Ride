@@ -19,7 +19,7 @@ const Favorites = () => {
           <li key={index} className="favorite-list-item">
             <h2 className="car-name">{item.name}</h2>
             <p className="car-description">{item.description}</p>
-            <button className='remove'>Remove from Favorites</button>
+            <button className='remove'>Remove from Favorite</button>
           </li>
         ))}
       </ul>
