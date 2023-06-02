@@ -100,8 +100,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd DriveTime-Back-End
-  gem install
+  npm create vite@latest
 
 ```
 
