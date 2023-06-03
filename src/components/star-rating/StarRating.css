@@ -6,11 +6,13 @@ button {
   }
   .on {
     color: #f77b22;
+    padding: 0;
   }
   .off {
     color: #aeacac;
+    padding: 0;
   }
 
   .star {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }

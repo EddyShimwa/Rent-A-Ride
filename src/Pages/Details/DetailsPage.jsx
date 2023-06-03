@@ -34,9 +34,8 @@ const DetailsPage = () => {
               </div>
               <div className='details-user-data'>
                 <p className="details-name">John Doe</p>
-                <p className='details-rating'>ratings
-                      <StarRating rating={4.5} /> {/* Render the StarRating component */}
-                      <span>4.5</span>
+                <p className='details-rating'>
+                <StarRating rating={4.5} />
                 </p>
             </div>
             </div>
