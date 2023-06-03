@@ -4,6 +4,7 @@ import './DetailsPage.css'
 import { HiOutlineChevronLeft, HiOutlineChevronDown } from 'react-icons/hi';
 import ProfileImage from '../../assets/profile-image.png'
 import { Link } from 'react-router-dom';
+import StarRating from '../../components/star-rating/StarRating';
 
 const DetailsPage = () => {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -33,7 +34,10 @@ const DetailsPage = () => {
               </div>
               <div className='details-user-data'>
                 <p className="details-name">John Doe</p>
-                <p className='details-rating'>ratings</p>
+                <p className='details-rating'>ratings
+                      <StarRating rating={4.5} /> {/* Render the StarRating component */}
+                      <span>4.5</span>
+                </p>
             </div>
             </div>
           </div>
