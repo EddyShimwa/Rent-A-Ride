@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addRide } from '../../redux/slices/addRideSlice';
 import { useNavigate } from 'react-router-dom';
+import { loginUser } from "../../redux/slices/loginSlice.js";
+
 
 const AddRide = () => {
   const [carData, setCarData] = useState({
@@ -22,6 +24,8 @@ const AddRide = () => {
   const { success } = useSelector((state) => state.ride);
 
   const { name, model, description, rating, price, rentPerDay } = carData;
+
+  const { user } = useSelector((state) => state.login);
 
   const validateForm = () => {
     let errors = {};
@@ -71,7 +75,9 @@ const AddRide = () => {
         errors: {},
       });
     }
-  }, [success]);
+
+    dispatch(loginUser());
+  }, [success, dispatch]);
 
 
   const handleFormSubmission = (e) => {
@@ -83,8 +89,12 @@ const AddRide = () => {
       return;
     }
 
+    const user_id = user.id;
+
+    console.log(user_id);
+
     const carPayload = {
-      user_id: 1,
+      user_id: user_id,
       name: name.trim(),
       model: model.trim(),
       description: description.trim(),
