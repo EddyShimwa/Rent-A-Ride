@@ -2,23 +2,50 @@ import Card from "../components/Card/Card"
 import { Link } from 'react-router-dom'
 import StarRating from "../components/star-rating/StarRating"
 
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchRides, selectRidesLoading, selectRidesError } from '../redux/slices/fetchRideSlice';
+
 const AllRides = () => {
+
+  const dispatch = useDispatch();
+  const rides = useSelector((state) => state.rides.rides);
+  const loading = useSelector(selectRidesLoading);
+  const error = useSelector(selectRidesError);
+
+  useEffect(() => {
+    dispatch(fetchRides());
+  }, [dispatch]);
+
+  if (loading) {
+    // Handle loading state
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    // Handle error state
+    return <div>Error: {error}</div>;
+  }
+
   return (
     <div>
-      <Link to='/ride-details'>
-        <Card
-          title="Houses"
-          description="Beautiful family apartment"
-          price = "$1000"
-          imageUrl="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1583&q=80"
-          time="per week"
-        >
-          <StarRating rating={4.5} />
-        </Card>
-
-      </Link>
+      {
+        rides.map((ride) => (
+        <Link to='/ride-details' key={ride.id}>
+          <Card
+            title={ride.name}
+            description={ride.description}
+            price={ride.price}
+            imageUrl={ride.car_image_url}
+            time="per week"
+            rating={ride.rating}
+          >
+            <StarRating rating={ride.rating} />
+          </Card>
+        </Link>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 export default AllRides

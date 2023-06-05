@@ -6,9 +6,6 @@ const Card = ({ title, description, imageUrl, price, rating, time }) => {
   return (
     <div className="card">
       <div className="card-content">
-        {/* <div className='card-header'>
-        <h2 className="card-title">{title}</h2>
-        </div> */}
         <img src={imageUrl} alt={title} className="card-image" />
         <div className='card-footer'>
         <p className="card-description">{description}</p>
@@ -17,7 +14,7 @@ const Card = ({ title, description, imageUrl, price, rating, time }) => {
         <div className='card-bottom'>
         <p className='details-rating'>
                 <StarRating /> {rating}
-         </p>
+        </p>
           <p className="card-time">{time}</p>
         </div>
       </div>
