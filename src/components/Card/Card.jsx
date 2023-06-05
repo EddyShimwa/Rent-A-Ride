@@ -1,5 +1,6 @@
 import './Card.css';
 import PropTypes from 'prop-types';
+import StarRating from '../star-rating/StarRating';
 
 const Card = ({ title, description, imageUrl, price, rating, time }) => {
   return (
@@ -14,7 +15,9 @@ const Card = ({ title, description, imageUrl, price, rating, time }) => {
         <p className="card-price">{price}</p>
         </div>
         <div className='card-bottom'>
-          <p className="card-rating">{rating}</p>
+        <p className='details-rating'>
+                <StarRating rating={4.5} />
+         </p>
           <p className="card-time">{time}</p>
         </div>
       </div>
