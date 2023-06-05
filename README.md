@@ -2,7 +2,6 @@
 
 <div align="center">
 
-
   <h3><b>Rent-A-Ride</b></h3>
 
 </div>
@@ -71,8 +70,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- Live Demo to be implemented
-
+- To be updated soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,7 +82,6 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
-
 
 ```sh
  gem install rails
@@ -152,7 +149,8 @@ npm run dev
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[I'll improve sylings.]**
+- [ ] **[We'll improve sylings.]**
+- []  **[We'll add payment functionality.]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
