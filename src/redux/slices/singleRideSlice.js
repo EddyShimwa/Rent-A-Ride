@@ -14,7 +14,6 @@ export const singleRide = createAsyncThunk(
      },
     }
    );
-   // console.log(response.data);
 
    if (response.status !== 200) {
     throw new Error(response.data.error);
@@ -51,7 +50,7 @@ const rideSlice = createSlice({
   ,
   [singleRide.rejected]: (state, { payload }) => {
    state.loading = false;
-   state.error = payload.message;
+   state.error = payload.error;
   }
 
  }

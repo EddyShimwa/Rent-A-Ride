@@ -24,9 +24,7 @@ const DetailsPage = () => {
 
   const dispatch = useDispatch();
 
-  const ride = useSelector((state) => state.singleRide.ride);
-
-  console.log("Single Ride: ", ride);
+  const ride = useSelector((state) => state.singleRide.ride.ride);
 
   useEffect(() => {
     dispatch(singleRide(rideId));
