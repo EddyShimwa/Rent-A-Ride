@@ -1,62 +1,61 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchRide = createAsyncThunk(
- "ride/fetchRide",
- async (_, { rejectWithValue }) => {
-  try {
-   const response = await axios.get(
-    "http://127.0.0.1:3000/cars/",
-    {
-     headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-     },
+export const fetchRides = createAsyncThunk(
+  "rides/fetchRides",
+  async (_, { rejectWithValue }) => {
+    try {
+      const response = await axios.get("http://127.0.0.1:3000/cars/", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+
+      console.log(response.data);
+
+      if (response.status !== 200) {
+        throw new Error(response.data.error);
+      }
+
+      return { rides: response.data };
+    } catch (error) {
+      return rejectWithValue({ error: error.response.error });
     }
-   );
-
-   console.log(response.data);
-
-   if (response.status !== 200) {
-    throw new Error(response.data.error);
-   }
-
-   return response.data;
-  } catch (error) {
-   return rejectWithValue({ error: error.response.error });
   }
- }
 );
 
 const initialState = {
- loading: false,
- error: null,
- success: false,
- ride: [],
-}
+  loading: false,
+  error: null,
+  rides: [],
+};
 
-const rideSlice = createSlice({
- name: "fetchRide",
- initialState: initialState,
+const ridesSlice = createSlice({
+  name: "rides",
+  initialState: initialState,
 
- reducers: {},
- extraReducers: {
-  [fetchRide.pending]: (state) => {
-   state.loading = true;
-   state.error = null;
-  }
-  ,
-  [fetchRide.fulfilled]: (state, { payload }) => {
-   state.loading = false;
-   state.success = true;
-   state.ride = payload;
-  }
-  ,
-  [fetchRide.rejected]: (state, { payload }) => {
-   state.loading = false;
-   state.error = payload.error;
-  }
- }
+  reducers: {},
+
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchRides.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchRides.fulfilled, (state, { payload }) => {
+        state.loading = false;
+        state.rides = payload.rides;
+      })
+      .addCase(fetchRides.rejected, (state, { payload }) => {
+        state.loading = false;
+        state.error = payload.error;
+      });
+  },
 });
 
-export default rideSlice.reducer;
+export default ridesSlice.reducer;
+
+export const selectRidesLoading = (state) => state.rides.loading;
+export const selectRidesError = (state) => state.rides.error;
+export const selectRides = (state) => state.rides.rides;
