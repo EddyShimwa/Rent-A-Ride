@@ -8,7 +8,7 @@ const ADD_CAR = 'car-rental/car/ADD';
 const DELETE_CAR = 'car-rental/car/DELETE';
 
 // Base Url
-const BASE_URL = process.env.REACT_APP_BASE_URL;
+// const BASE_URL = process.env.REACT_APP_BASE_URL;
 // Method getCars
 export const getCars = createAsyncThunk(SHOW_CARS, async (filter = null, thunkAPI) => {
   const API_URL = filter === true ? `${BASE_URL}/cars?filter=true` : `${BASE_URL}/cars`;
