@@ -36,7 +36,8 @@ const ProjectRouter = () => {
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
               <Route path='*' element={<NotFound />} />
-              <Route path='/ride-details' element={<DetailsPage />} />
+              <Route path='/ride-details/:rideId' element={<DetailsPage />} />
+
           </Routes>
         </Router>
     )

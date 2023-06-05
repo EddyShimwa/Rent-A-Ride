@@ -5,13 +5,40 @@ import { HiOutlineChevronLeft, HiOutlineChevronDown } from 'react-icons/hi';
 import ProfileImage from '../../assets/profile-image.png'
 import { Link } from 'react-router-dom';
 import StarRating from '../../components/star-rating/StarRating';
+import { useParams } from 'react-router-dom';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { singleRide } from '../../redux/slices/singleRideSlice';
+import Dialog from '../../components/Dialog/Dialog';
 
 const DetailsPage = () => {
   const [isFavorite, setIsFavorite] = useState(false);
-  
+  const loading = useSelector((state) => state.singleRide.loading);
+
   const handleAddToFavorites = () => {
     setIsFavorite(!isFavorite);
   };
+
+  const { rideId } = useParams();
+
+  const dispatch = useDispatch();
+
+  const ride = useSelector((state) => state.singleRide.ride);
+
+  console.log("Single Ride: ", ride);
+
+  useEffect(() => {
+    dispatch(singleRide(rideId));
+  }, [dispatch, rideId]);
+
+  if (loading) {
+    return <Dialog message="Loading..." isLoading={loading} />;
+  }
+
+  if (!ride) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="details-page-container">
@@ -24,7 +51,7 @@ const DetailsPage = () => {
       </div>
 
       <div className="details-middle-section">
-        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1583&q=80" alt="House" className='details-image' />
+        <img src={ride.car_image_url} alt="House" className='details-image' />
 
         <div className="image-inner-text">
           <div className='left-side'>
@@ -42,7 +69,9 @@ const DetailsPage = () => {
           </div>
 
           <div className='right-side'>
-            <p>$1000</p>
+            <p>
+              <span className='details-price'>${ride.price}</span>
+            </p>
             <p>per month</p>
           </div>
 
@@ -52,7 +81,7 @@ const DetailsPage = () => {
       <div className="details-description-section">
         <h5 className='details-description-title'>About this listing</h5>
         <p className='details-page-description'>
-          Lorem ipsum dolor sit ame consec tetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+          {ride.description}
         </p>
       </div>
 
