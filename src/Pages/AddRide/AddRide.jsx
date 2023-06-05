@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addRide } from '../../redux/slices/addRideSlice';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from "../../redux/slices/loginSlice.js";
+import Dialog from '../../components/Dialog/Dialog';
 
 
 const AddRide = () => {
@@ -16,6 +17,9 @@ const AddRide = () => {
     rentPerDay: '',
     errors: {},
   });
+
+  const [dialogVisible, setDialogVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -80,7 +84,7 @@ const AddRide = () => {
   }, [success, dispatch]);
 
 
-  const handleFormSubmission = (e) => {
+  const handleFormSubmission = async (e) => {
     e.preventDefault();
 
     const errors = validateForm();
@@ -103,11 +107,18 @@ const AddRide = () => {
       rent_per_day: +rentPerDay,
     }
 
-    dispatch(addRide(carPayload));
+    setLoading(true);
+
+    // Dispatch the addRide action
+    await dispatch(addRide(carPayload));
+
+    setLoading(false);
 
     if (success) {
+      setDialogVisible(true);
       navigate('/');
     } else {
+      setDialogVisible(false);
       navigate('/add-ride');
     }
 
@@ -169,6 +180,21 @@ const AddRide = () => {
               carData.errors.rentPerDay && <p className='error'>{carData.errors.rentPerDay}</p>
           }
         </div>
+
+        {
+          loading && (
+            <Dialog message="Loading..." isLoading={loading} />
+          )
+        }
+
+        {dialogVisible && (
+          <Dialog
+            visible={dialogVisible}
+            onClose={() => setDialogVisible(false)}
+            title="Success"
+            body="Car added successfully!"
+          />
+        )}
 
         <button type='submit' className="add-ride-btn">Add Ride</button>
       </form>
