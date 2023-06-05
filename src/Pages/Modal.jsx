@@ -20,6 +20,7 @@ const Modal = ({ isOpen, onCancel, onConfirm }) => (
     </div>
     )}
   </>
+
 );
 
 Modal.propTypes = {
