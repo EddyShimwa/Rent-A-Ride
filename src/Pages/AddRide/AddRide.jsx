@@ -1,5 +1,8 @@
 import './AddRide.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addRide } from '../../redux/slices/addRideSlice';
+import { useNavigate } from 'react-router-dom';
 
 const AddRide = () => {
   const [carData, setCarData] = useState({
@@ -11,6 +14,12 @@ const AddRide = () => {
     rentPerDay: '',
     errors: {},
   });
+
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  const { success } = useSelector((state) => state.ride);
 
   const { name, model, description, rating, price, rentPerDay } = carData;
 
@@ -50,6 +59,20 @@ const AddRide = () => {
     return errors;
   };
 
+  useEffect(() => {
+    if (success) {
+      setCarData({
+        name: '',
+        model: '',
+        description: '',
+        rating: '',
+        price: '',
+        rentPerDay: '',
+        errors: {},
+      });
+    }
+  }, [success]);
+
 
   const handleFormSubmission = (e) => {
     e.preventDefault();
@@ -60,7 +83,25 @@ const AddRide = () => {
       return;
     }
 
-    console.log(carData);
+    const carPayload = {
+      user_id: 1,
+      name: name.trim(),
+      model: model.trim(),
+      description: description.trim(),
+      rating: +rating,
+      price: +price,
+      rent_per_day: +rentPerDay,
+    }
+
+    dispatch(addRide(carPayload));
+
+    if (success) {
+      navigate('/');
+    } else {
+      navigate('/add-ride');
+    }
+
+    console.log(carPayload);
 };
 
 
