@@ -136,8 +136,8 @@ npm run dev
 
 👤 **Kennedy Owusu**
 
-- GitHub: [@kennedyowusu](https://github.com/kennedyowusu)
-- Twitter: [@_iamkobby](https://twitter.com/_iamkobby)
+- GitHub: [Kennedy Owusu](https://github.com/kennedyowusu)
+- Twitter: [Kennedy Owusu](https://twitter.com/_iamkobby)
 - LinkedIn: [Kennedy Owusu](https://www.linkedin.com/in/kennedy-owusu/)
 
 👤 **Pierre Celestin**
