@@ -22,7 +22,7 @@ export const addRide = createAsyncThunk(
 
    return { ride: response.data.ride};
   } catch (error) {
-   return rejectWithValue(error.response.error);
+   return rejectWithValue({ error: error.response.error });
   }
  }
 );

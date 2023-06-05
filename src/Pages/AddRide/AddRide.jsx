@@ -14,6 +14,7 @@ const AddRide = () => {
     description: '',
     rating: '',
     price: '',
+    car_image_url: '',
     rentPerDay: '',
     errors: {},
   });
@@ -27,7 +28,7 @@ const AddRide = () => {
 
   const { success } = useSelector((state) => state.ride);
 
-  const { name, model, description, rating, price, rentPerDay } = carData;
+  const { name, model, description, rating, price, car_image_url, rentPerDay } = carData;
 
   const { user } = useSelector((state) => state.login);
 
@@ -58,6 +59,16 @@ const AddRide = () => {
       errors.price = 'Car Price must be a positive number';
     }
 
+    if (!car_image_url.trim()) {
+      errors.car_image_url = 'Car Image URL is required';
+    } else if (!car_image_url.startsWith('http')) {
+      errors.car_image_url = 'Car Image URL must start with http';
+    } else if (car_image_url.includes(' ')) {
+      errors.car_image_url = 'Car Image URL must not contain spaces';
+    } else if (car_image_url.includes('!')) {
+      errors.car_image_url = 'Car Image URL must not contain !';
+    }
+
     if (!rentPerDay.trim()) {
       errors.rentPerDay = 'Car Rent Per Day is required';
     } else if (isNaN(rentPerDay) || +rentPerDay <= 0) {
@@ -75,6 +86,7 @@ const AddRide = () => {
         description: '',
         rating: '',
         price: '',
+        car_image_url: '',
         rentPerDay: '',
         errors: {},
       });
@@ -104,6 +116,7 @@ const AddRide = () => {
       description: description.trim(),
       rating: +rating,
       price: +price,
+      car_image_url: car_image_url.trim(),
       rent_per_day: +rentPerDay,
     }
 
@@ -140,45 +153,54 @@ const AddRide = () => {
               carData.errors.name && <p className='error'>{carData.errors.name}</p>
             }
 
-          <input type="text" placeholder="Enter Car Model" className="add-car-input"
-            value={model}
-            onChange={(e) => setCarData({ ...carData, model: e.target.value })}
-          />
-          {
-              carData.errors.model && <p className='error'>{carData.errors.model}</p>
-          }
+            <input type="text" placeholder="Enter Car Model" className="add-car-input"
+              value={model}
+              onChange={(e) => setCarData({ ...carData, model: e.target.value })}
+            />
+            {
+                carData.errors.model && <p className='error'>{carData.errors.model}</p>
+            }
 
-          <input type="text" placeholder="Enter Car Description" className="add-car-input"
-            value={description}
-            onChange={(e) => setCarData({ ...carData, description: e.target.value })}
-          />
-          {
-              carData.errors.description && <p className='error'>{carData.errors.description}</p>
-          }
+            <input type="text" placeholder="Enter Car Description" className="add-car-input"
+              value={description}
+              onChange={(e) => setCarData({ ...carData, description: e.target.value })}
+            />
+            {
+                carData.errors.description && <p className='error'>{carData.errors.description}</p>
+            }
 
-          <input type="text" placeholder="Enter Car Rating" className="add-car-input"
-            value={rating}
-            onChange={(e) => setCarData({ ...carData, rating: e.target.value })}
-          />
-          {
-              carData.errors.rating && <p className='error'>{carData.errors.rating}</p>
-          }
+            <input type="text" placeholder="Enter Car Rating" className="add-car-input"
+              value={rating}
+              onChange={(e) => setCarData({ ...carData, rating: e.target.value })}
+            />
+            {
+                carData.errors.rating && <p className='error'>{carData.errors.rating}</p>
+            }
 
-          <input type="text" placeholder="Enter Car Price" className="add-car-input"
-            value={price}
-            onChange={(e) => setCarData({ ...carData, price: e.target.value })}
-          />
-          {
-              carData.errors.price && <p className='error'>{carData.errors.price}</p>
-          }
+            <input type="text" placeholder="Enter Car Price" className="add-car-input"
+              value={price}
+              onChange={(e) => setCarData({ ...carData, price: e.target.value })}
+            />
+            {
+                carData.errors.price && <p className='error'>{carData.errors.price}</p>
+            }
 
-          <input type="text" placeholder="Enter Car Rent Per Day Charge" className="add-car-input"
-            value={rentPerDay}
-            onChange={(e) => setCarData({ ...carData, rentPerDay: e.target.value })}
-          />
-          {
-              carData.errors.rentPerDay && <p className='error'>{carData.errors.rentPerDay}</p>
-          }
+            <input type="text" placeholder="Enter Car Rent Per Day Charge" className="add-car-input"
+              value={rentPerDay}
+              onChange={(e) => setCarData({ ...carData, rentPerDay: e.target.value })}
+            />
+            {
+                carData.errors.rentPerDay && <p className='error'>{carData.errors.rentPerDay}</p>
+            }
+
+            <input type="text" placeholder="Enter Car Image URL" className="add-car-input"
+              value={car_image_url}
+              onChange={(e) => setCarData({ ...carData, car_image_url: e.target.value })}
+            />
+            {
+              carData.errors.car_image_url && <p className='error'>{carData.errors.car_image_url}</p>
+            }
+
         </div>
 
         {
