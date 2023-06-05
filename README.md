@@ -149,8 +149,8 @@ npm run dev
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[We'll improve sylings.]**
-- []  **[We'll add payment functionality.]**
+-  **We'll improve sylings.**
+-  **We'll add payment functionality.**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
