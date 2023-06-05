@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const fetchRide = createAsyncThunk(
  "ride/fetchRide",
- async ( { rejectWithValue }) => {
+ async (_, { rejectWithValue }) => {
   try {
    const response = await axios.get(
     "http://127.0.0.1:3000/cars/",
@@ -21,7 +21,7 @@ export const fetchRide = createAsyncThunk(
     throw new Error(response.data.error);
    }
 
-   return { ride: response.data.ride };
+   return response.data;
   } catch (error) {
    return rejectWithValue({ error: error.response.error });
   }
@@ -32,7 +32,7 @@ const initialState = {
  loading: false,
  error: null,
  success: false,
- ride: {},
+ ride: [],
 }
 
 const rideSlice = createSlice({
@@ -49,7 +49,7 @@ const rideSlice = createSlice({
   [fetchRide.fulfilled]: (state, { payload }) => {
    state.loading = false;
    state.success = true;
-   state.ride = payload.ride;
+   state.ride = payload;
   }
   ,
   [fetchRide.rejected]: (state, { payload }) => {
