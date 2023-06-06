@@ -28,14 +28,13 @@
   display: flex;
   justify-items: center;
   align-items: center;
-  font-size:  0.9rem;
+  font-size: 0.9rem;
   color: #1f1f1f;
   margin: auto;
   width: 100%;
   height: 100%;
   padding: 1% 0;
 }
-
 
 .remove {
   display: flex;
@@ -132,7 +131,7 @@
   }
 
   .car-desc {
-    align-items: justify;
+    text-align: justify;
     font-size: 0.9rem;
     color: #1f1f1f;
     margin: auto;
@@ -214,7 +213,7 @@
   }
 
   .car-desc {
-    align-items: justify;
+    text-align: justify;
     font-size: 0.9rem;
     color: #1f1f1f;
     margin: auto;
@@ -296,7 +295,7 @@
   }
 
   .car-desc {
-    align-items: justify;
+    text-align: justify;
     font-size: 0.9rem;
     color: #1f1f1f;
     margin: auto;
@@ -378,7 +377,7 @@
   }
 
   .car-desc {
-    align-items: justify;
+    text-align: justify;
     font-size: 0.9rem;
     color: #1f1f1f;
     margin: auto;
@@ -459,7 +458,7 @@
   }
 
   .car-desc {
-    align-items: justify;
+    text-align: justify;
     font-size: 0.9rem;
     color: #1f1f1f;
     margin: auto;
@@ -525,8 +524,6 @@
   }
 
   .fav-car-image {
-    display: flex;
-    justify-content: center;
     margin: auto;
     width: 100%;
     height: 100%;
@@ -540,7 +537,7 @@
   }
 
   .car-desc {
-    align-items: justify;
+    text-align: justify;
     font-size: 0.9rem;
     color: #1f1f1f;
     margin: auto;
@@ -621,7 +618,7 @@
   }
 
   .car-desc {
-    align-items: justify;
+    text-align: justify;
     font-size: 0.9rem;
     color: #1f1f1f;
     margin: auto;
