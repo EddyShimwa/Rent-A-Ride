@@ -25,13 +25,13 @@ const Favorites = () => {
 
   return (
     <div className="favorites-container">
-      <h1 className="favz-header">Favorites Rides</h1>
+      <h1 className="fav-header">Favorites Rides</h1>
       <ul className='favorite-list'>
         {favorites.map((item, index) => (
           <li key={index} className="favorite-list-item">
-            <img src= {item.image} className="car-image" alt="" />
+            <img src= {item.image} className="fav-car-image" alt="Favorite Car" />
             <h2 className="car-name">{item.name}</h2>
-            <p className="car-description">{item.description}</p>
+            <p className="car-desc">{item.description}</p>
             <button className='remove'>Remove from Favorites</button>
           </li>
         ))}
