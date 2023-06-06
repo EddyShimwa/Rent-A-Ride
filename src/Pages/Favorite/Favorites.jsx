@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import Dialog from "../../components/Dialog/Dialog";
 import { fetchFavorites, selectFavoritesLoading, selectFavoritesError } from '../../redux/slices/fetchFavoriteSlice';
 
-
 const Favorites = () => {
   const dispatch = useDispatch();
   const favorites = useSelector((state) => state.favorites.favorites);
