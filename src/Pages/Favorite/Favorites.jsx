@@ -43,13 +43,13 @@ const Favorites = () => {
             <img src= {item.image} className="fav-car-image" alt="Favorite Car" />
             <h2 className="car-name">{item.name}</h2>
             <p className="car-desc">{item.description}</p>
-              {/* <button className='remove'
+              <button className='remove'
                 onClick={() => {
                 console.log('Favorite ID:', item.id);
                 handleRemoveFavorite(item.id);
                 }}
                 > Remove Favorite
-              </button> */}
+              </button>
           </li>
         ))}
       </ul>
