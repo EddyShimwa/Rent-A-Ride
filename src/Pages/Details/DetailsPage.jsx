@@ -13,6 +13,8 @@ import Dialog from '../../components/Dialog/Dialog';
 import { selectLoginUserId } from '../../redux/slices/loginSlice';
 import axios from 'axios';
 
+import { addFavorites } from '../../redux/slices/addFavoriteSlice';
+
 const DetailsPage = () => {
   const loading = useSelector((state) => state.singleRide.loading);
 
