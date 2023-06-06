@@ -1,16 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const addFavorites = createAsyncThunk(
+export const addFavorite = createAsyncThunk(
  "favorites/addFavorites",
- async (data, { rejectWithValue }) => {
+ async (favoriteData, { rejectWithValue }) => {
   try {
    const response = await axios.post(
-    "http://127.0.0.1:3000/favorites", data,
+    "http://127.0.0.1:3000/favorites/", favoriteData,
     {
      headers: {
       "Content-Type": "application/json",
-      "Accept": "application/json",
+      "Accept": "application/json"
      },
     }
    );
@@ -34,23 +34,23 @@ const initialState = {
 }
 
 const addFavoritesSlice = createSlice({
- name: "addFavorites",
+ name: "addFavorite",
  initialState: initialState,
 
  reducers: {},
 
  extraReducers: (builder) => {
   builder
-   .addCase(addFavorites.pending, (state) => {
+   .addCase(addFavorite.pending, (state) => {
     state.loading = true;
     state.error = null;
    })
-   .addCase(addFavorites.fulfilled, (state, { payload }) => {
+   .addCase(addFavorite.fulfilled, (state, { payload }) => {
     state.loading = false;
     state.success = true;
     state.favorites = payload.favorites;
    })
-   .addCase(addFavorites.rejected, (state, { payload }) => {
+   .addCase(addFavorite.rejected, (state, { payload }) => {
     state.loading = false;
     state.error = payload.error;
    });

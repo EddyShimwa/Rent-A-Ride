@@ -15,7 +15,7 @@ const store = configureStore({
     rides: ridesSlice,
     singleRide: singleRideSlice,
     favorites: favoritesSlice,
-    addFavorites: addFavoriteSlice,
+    addFavorite: addFavoriteSlice,
   }
 });
 

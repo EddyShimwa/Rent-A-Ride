@@ -11,12 +11,12 @@ import { useEffect } from 'react';
 import { singleRide } from '../../redux/slices/singleRideSlice';
 import Dialog from '../../components/Dialog/Dialog';
 import { selectLoginUserId } from '../../redux/slices/loginSlice';
-import axios from 'axios';
 
-import { addFavorites } from '../../redux/slices/addFavoriteSlice';
+import { addFavorite } from '../../redux/slices/addFavoriteSlice';
 
 const DetailsPage = () => {
   const loading = useSelector((state) => state.singleRide.loading);
+  const isLoading = useSelector((state) => state.addFavorite.isLoading);
 
   const userId = useSelector(selectLoginUserId);
 
@@ -51,16 +51,20 @@ const DetailsPage = () => {
       image: ride.car_image_url,
     };
 
-    axios.post('http://127.0.0.1:3000/favorites', favoriteData)
-      .then(response => {
-        console.log('Favorite added successfully:', response.data);
-        navigate('/favorite');
+    dispatch(addFavorite(favoriteData))
+      .then((response) => {
+        try {
+          console.log('Favorite added successfully:', response.payload);
+          navigate('/favorite');
+        } catch (error) {
+          console.error('Failed to handle success:', error);
+        }
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Failed to add favorite:', error);
       });
-
   };
+
 
   return (
     <div className="details-page-container">
@@ -110,6 +114,10 @@ const DetailsPage = () => {
       <div className="details-read-more-arrow">
         <HiOutlineChevronDown className='details-read-more-icon' />
       </div>
+
+      {
+        isLoading && <Dialog message="Loading..." isLoading={isLoading} />
+      }
 
       <div className='details-footer'>
         <button className="details-footer-button" onClick={handleAddToFavorites}>
