@@ -1,16 +1,10 @@
-import {Route, Redirect} from 'react-router-dom';
+import {Outlet, Navigate} from 'react-router-dom';
 
-const ProtectedRoute = ({component, ...rest}) => {
+const ProtectedRoutes = () => {
 let auth = {'token': false}
 return (
-<Route {...rest}>
-    {!auth.token 
-    ? 
-    <Redirect to="/login" />
-    :
-    component}
-</Route>
+ auth.token ? <Outlet /> : <Navigate to="/login" replace={true} />
 )
 
 }
-export default ProtectedRoute;
+export default ProtectedRoutes
