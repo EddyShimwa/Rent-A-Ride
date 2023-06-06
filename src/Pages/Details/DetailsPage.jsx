@@ -1,9 +1,8 @@
-import { useState } from 'react'
 import { BsSearch } from 'react-icons/bs';
 import './DetailsPage.css'
 import { HiOutlineChevronLeft, HiOutlineChevronDown } from 'react-icons/hi';
 import ProfileImage from '../../assets/profile-image.png'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import StarRating from '../../components/star-rating/StarRating';
 import { useParams } from 'react-router-dom';
 
@@ -11,14 +10,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { singleRide } from '../../redux/slices/singleRideSlice';
 import Dialog from '../../components/Dialog/Dialog';
+import { selectLoginUserId } from '../../redux/slices/loginSlice';
+import axios from 'axios';
 
 const DetailsPage = () => {
-  const [isFavorite, setIsFavorite] = useState(false);
   const loading = useSelector((state) => state.singleRide.loading);
 
-  const handleAddToFavorites = () => {
-    setIsFavorite(!isFavorite);
-  };
+  const userId = useSelector(selectLoginUserId);
+
+  const navigate = useNavigate();
 
   const { rideId } = useParams();
 
@@ -37,6 +37,28 @@ const DetailsPage = () => {
   if (!ride) {
     return <div>Loading...</div>;
   }
+
+  const handleAddToFavorites = (e) => {
+    e.preventDefault();
+
+    const favoriteData = {
+      user_id: userId,
+      car_id: ride.id,
+      name: ride.name,
+      description: ride.description,
+      image: ride.car_image_url,
+    };
+
+    axios.post('http://127.0.0.1:3000/favorites', favoriteData)
+      .then(response => {
+        console.log('Favorite added successfully:', response.data);
+        navigate('/favorite');
+      })
+      .catch(error => {
+        console.error('Failed to add favorite:', error);
+      });
+
+  };
 
   return (
     <div className="details-page-container">
@@ -88,8 +110,8 @@ const DetailsPage = () => {
       </div>
 
       <div className='details-footer'>
-      <button className="details-footer-button" onClick={handleAddToFavorites}>
-          {isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+        <button className="details-footer-button" onClick={handleAddToFavorites}>
+          Add to Favorites
         </button>
       </div>
 
