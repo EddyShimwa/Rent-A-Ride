@@ -1,5 +1,6 @@
 import Sidebar from "../../components/SideBar/Sidebar";
-import AllRides from "../../Pages/AllRides";
+import AllRides from "../AllRides";
+
 
 const Dashboard = () => {
     return (

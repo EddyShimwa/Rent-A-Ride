@@ -31,12 +31,13 @@ const ProjectRouter = () => {
               <Route path='/favorite' element={<Favorites />} />
               <Route path='/add-ride' element={<AddRide />} />
               <Route path='/delete-ride' element={<DeleteRide />} />
+              <Route path='/ride-details/:rideId' element={<DetailsPage />} />
 
             </Route>
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
               <Route path='*' element={<NotFound />} />
-              <Route path='/ride-details' element={<DetailsPage />} />
+
           </Routes>
         </Router>
     )

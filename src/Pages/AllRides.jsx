@@ -5,6 +5,7 @@ import StarRating from "../components/star-rating/StarRating"
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchRides, selectRidesLoading, selectRidesError } from '../redux/slices/fetchRideSlice';
+import Dialog from "../components/Dialog/Dialog";
 
 const AllRides = () => {
 
@@ -18,12 +19,10 @@ const AllRides = () => {
   }, [dispatch]);
 
   if (loading) {
-    // Handle loading state
-    return <div>Loading...</div>;
+    return <Dialog message="Loading..." isLoading={loading} />;
   }
 
   if (error) {
-    // Handle error state
     return <div>Error: {error}</div>;
   }
 
@@ -31,7 +30,7 @@ const AllRides = () => {
     <div>
       {
         rides.map((ride) => (
-        <Link to='/ride-details' key={ride.id}>
+        <Link to={`/ride-details/${ride.id}`} key={ride.id}>
           <Card
             title={ride.name}
             description={ride.description}
