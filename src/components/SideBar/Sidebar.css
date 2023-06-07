@@ -47,6 +47,7 @@ main {
   background-color: var(--first-color);
   padding-top: 1rem;
   transition: 0.5s;
+  z-index: 2;
 }
 
 .profile-logo {
