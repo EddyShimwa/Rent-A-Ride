@@ -3,7 +3,7 @@ import Login from '../../Pages/Login/Login'
 import Register from '../../Pages/Register/Register'
 import { BrowserRouter as Router, Route, Routes, Outlet, Navigate } from 'react-router-dom';
 import AllRides from '../../Pages/AllRides';
-import Favorites from '../../Pages/Favorite/Favorites';;
+import Favorites from '../../Pages/Favorite/Favorites';
 import AddRide from '../../Pages/AddRide/AddRide';
 import DeleteRide from '../../Pages/Delete/DeleteRide';
 import NotFound from '../../Pages/NotFound/NotFound';
@@ -34,7 +34,7 @@ const ProjectRouter = () => {
           {/* Protected Routes */}
           <Route
             path="/"
-            element={<ProtectedRoutes />} 
+            element={<ProtectedRoutes />}
           >
             <Route path="/" element={<Dashboard />} />
             <Route path="/my-ride" element={<AllRides />} />
