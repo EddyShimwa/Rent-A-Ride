@@ -23,6 +23,8 @@
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
+  - [🖼 Kanban Board ](#-kanban-board-)
+  - [Number of Team ](#number-of-team-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
@@ -174,6 +176,30 @@ Feel free to check the [issues page](https://github.com/EddyShimwa/Rent-A-Ride/i
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Kanban board -->
+
+## 🖼 Kanban Board <a name="kanban-board"></a>
+
+Here is the link to the [KANBAN-BOARD](https://github.com/users/EddyShimwa/projects/3)
+
+**The before**:
+![image (1)](src/screenshots/rent-a-ride-kanban.png)
+
+**The After**:
+![image (2)](src/screenshots/the-after.png)
+
+<!-- NUMBER OF TEAM -->
+
+## Number of Team <a name="number-of-team"></a>
+
+**There are three collaborators in this team**
+
+- [EddyShimwa](https://github.com/EddyShimwa)
+- [Kennedy Owusu](https://github.com/kennedyowusu)
+- [Pierre Celestin](https://github.com/Piercel2022)
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
@@ -187,9 +213,11 @@ If you like this project star this repository
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank microverse for this opportunity to learn
+I would like to thank Microverse for this opportunity to learn
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+I thank the designer of this UI for an inspiration - Link below
+
+- [UI LINK](https://www.behance.net/gallery/37706679/Circle-(Landing-page-Dashboard-Mobile-App))
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
