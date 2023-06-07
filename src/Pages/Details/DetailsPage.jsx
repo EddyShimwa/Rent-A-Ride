@@ -1,4 +1,3 @@
-import { BsSearch } from 'react-icons/bs';
 import './DetailsPage.css'
 import { HiOutlineChevronLeft, HiOutlineChevronDown } from 'react-icons/hi';
 import ProfileImage from '../../assets/profile-image.png'
@@ -73,7 +72,6 @@ const DetailsPage = () => {
           <HiOutlineChevronLeft className='back-icon' />
         </Link>
         <h2 className='details-title'>Beautiful Family Rides</h2>
-        <BsSearch className='search-icon' />
       </div>
 
       <div className="details-middle-section">
