@@ -30,7 +30,7 @@ const Sidebar = () => {
 
       <aside className={`sidebar ${show && 'show'}`}>
         <nav className='nav'>
-          {!show ? <div className='profile-logo'></div> : <div className='profile'></div>}
+          {/* {!show ? <div className='profile-logo'></div> : <div className='profile'></div>} */}
           <div className='sidebar-items-container'>
             <div className='nav-list'>
               <Link to='/my-ride' className={`nav-logo ${navLinkClass} active`}>
