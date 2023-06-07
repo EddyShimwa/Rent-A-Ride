@@ -38,6 +38,11 @@ main {
   cursor: pointer;
 }
 
+.app-name {
+  font-weight: 700;
+  color: #333;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -50,38 +55,11 @@ main {
   z-index: 2;
 }
 
-.profile-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 60px auto;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-  border: 2px solid var(--first-color-alt);
-  margin-bottom: -25rem;
-}
-
-.profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 60px auto;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 50px;
-  height: 50px;
-  border: 2px solid var(--first-color-alt);
-  margin-bottom: -25rem;
-}
-
 .sidebar-items-container {
   display: flex;
   flex-direction: column;
   padding-top: -8.5rem;
-  margin-top: 2.2rem;
+  margin-top: 3rem;
 }
 
 .nav {
