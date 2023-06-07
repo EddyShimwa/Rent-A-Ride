@@ -3,7 +3,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 330px;
-  height: 420px;
+  height: 820px;
   background-color: #fff;
   margin-top: 5rem;
   margin-left: 1.5rem;
@@ -12,7 +12,7 @@
 .card-image {
   width: 330px;
   height: 350px;
-  object-fit: cover;
+  object-fit: fill;
   background: transparent;
   border-radius: 4px;
 }
@@ -42,8 +42,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2px 16px;
-  margin-top: -5px;
+  padding: 2rem 16px;
+  margin-top: -30px;
 }
 
 .card-bottom {
@@ -67,7 +67,6 @@
 .card-description {
   font-size: 14px;
   color: #555;
-  font-weight: bold;
 }
 
 /* Media Query */
@@ -75,7 +74,7 @@
 @media screen and (min-width: 320px) {
   .card {
     width: 90vw;
-    height: 50vh;
+    height: 36rem;
     margin: 4.2rem auto;
   }
 
@@ -86,7 +85,7 @@
 
   .card-description {
     font-size: 14px;
-    font-weight: bold;
+    font-weight: normal;
   }
 
   .card-price {
@@ -110,7 +109,7 @@
 @media screen and (min-width: 375px) {
   .card {
     width: 90vw;
-    height: 50vh;
+    height: 36rem;
     margin: 4.2rem auto;
   }
 
@@ -121,7 +120,7 @@
 
   .card-description {
     font-size: 14px;
-    font-weight: bold;
+    font-weight: normal;
   }
 
   .card-price {
@@ -145,7 +144,7 @@
 @media screen and (min-width: 425px) {
   .card {
     width: 90vw;
-    height: 50vh;
+    height: 36rem;
     margin: 4.5rem auto;
   }
 
@@ -155,8 +154,8 @@
   }
 
   .card-description {
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: normal;
     color: #555;
   }
 
@@ -179,7 +178,7 @@
 @media screen and (min-width: 640px) {
   .card {
     width: 70vw;
-    height: 60vh;
+    height: 42rem;
     margin: 4.5rem auto;
   }
 
@@ -189,8 +188,8 @@
   }
 
   .card-description {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: normal;
     color: #555;
   }
 
@@ -213,7 +212,7 @@
 @media screen and (min-width: 768px) {
   .card {
     width: 75vw;
-    height: 60vh;
+    height: 40rem;
     margin: 5.5rem auto;
   }
 
@@ -223,8 +222,8 @@
   }
 
   .card-description {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: normal;
     color: #555;
   }
 
@@ -247,7 +246,7 @@
 @media screen and (min-width: 820px) {
   .card {
     width: 75vw;
-    height: 60vh;
+    height: 40rem;
     margin: 5.5rem auto;
   }
 
@@ -257,8 +256,8 @@
   }
 
   .card-description {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: normal;
     color: #555;
   }
 
@@ -281,7 +280,7 @@
 @media screen and (min-width: 1024px) {
   .card {
     width: 80vw;
-    height: 80vh;
+    height: 50rem;
     margin: 5.5rem auto;
   }
 
@@ -291,8 +290,8 @@
   }
 
   .card-description {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: normal;
     color: #555;
   }
 
