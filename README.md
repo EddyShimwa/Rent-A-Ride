@@ -84,7 +84,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 ```sh
- gem install rails
+ npm create vite@latest Rent-A-Ride -- --template react
 ```
 
 ### Setup
