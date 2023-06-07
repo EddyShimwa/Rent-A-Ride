@@ -105,14 +105,6 @@ Install this project with:
 
 ```
 
-### Usage
-
-To run the project, execute the following command:
-
-```sh
-  rails server
-```
-
 ### Run the project
 
 To run this application :
