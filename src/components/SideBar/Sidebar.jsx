@@ -22,7 +22,7 @@ const Sidebar = () => {
         <div className='header-toggle' onClick={() => setShow(!show)}>
           {show ? <CgClose className={navLinkIconClass} /> : <SlMenu className={navLinkIconClass} />}
         </div>
-        <p>Houses</p>
+        <p>Rent-A-Ride</p>
         <div className='header-search'>
           <BsSearch className='search-icon' />
         </div>
