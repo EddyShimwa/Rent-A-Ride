@@ -9,12 +9,20 @@ import { RiLogoutCircleRLine } from 'react-icons/ri'
 import { AiFillDelete } from 'react-icons/ai'
 import { CgClose } from 'react-icons/cg'
 import { BsSearch } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
   const [show, setShow] = useState(false);
-
+  
   const navLinkClass = 'nav-link';
   const navLinkIconClass = 'nav-link-icon';
+  // const navigate = useNavigate();
+
+  const removeToken = () => {
+    // if (localStorage.removeItem('token')){
+    //   // navigate('/login');
+    // }
+  }
 
   return (
       <main className={`${show && 'space-toggle'}`}>
@@ -53,10 +61,10 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <Link to='/login' className={`${navLinkClass}`}>
-            <RiLogoutCircleRLine className={navLinkIconClass} />
+          <button onClick={removeToken()} className={`${navLinkClass}`}>
+            <RiLogoutCircleRLine className={navLinkIconClass}/>
             <span className='nav-link-name'>Logout</span>
-          </Link>
+          </button>
         </nav>
       </aside>
       </main>

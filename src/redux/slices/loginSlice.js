@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
 export const loginUser = createAsyncThunk(
  "user/loginUser",
  async (data, { rejectWithValue }) => {
@@ -59,8 +60,8 @@ const loginSlice = createSlice({
   },
  }
 });
-
 export default loginSlice.reducer;
+
 
 export const selectLoginLoading = (state) => state.login.loading;
 export const selectLoginError = (state) => state.login.error;
@@ -69,5 +70,9 @@ export const selectLoginUser = (state) => state.login.user;
 export const selectLoginToken = (state) => state.login.user.jwt;
 export const selectLoginUserId = (state) => state.login.user.id;
 export const selectLoginUserState = (state) => state.login;
+export const token = localStorage.getItem('token');
+console.log(token);
+
+
 
 
