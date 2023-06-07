@@ -1,8 +1,9 @@
 .details-page-container {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 80vh;
   width: 100%;
+  z-index: 1;
 }
 
 .details-top-section {
