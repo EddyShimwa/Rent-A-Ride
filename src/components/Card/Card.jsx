@@ -13,7 +13,7 @@ const Card = ({ title, description, imageUrl, price, rating, time }) => {
         </div>
         <div className='card-bottom'>
         <p className='details-rating'>
-                <StarRating /> {rating}
+        <StarRating /> {rating}
         </p>
           <p className="card-time">{time}</p>
         </div>
