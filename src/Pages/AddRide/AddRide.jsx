@@ -134,8 +134,6 @@ const AddRide = () => {
       setDialogVisible(false);
       navigate('/add-ride');
     }
-
-    console.log(carPayload);
 };
 
 
