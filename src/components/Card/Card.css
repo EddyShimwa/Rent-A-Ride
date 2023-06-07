@@ -1,0 +1,315 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90vw;
+  height: 40rem;
+  background-color: #fff;
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+  z-index: 1;
+}
+
+.card-image {
+  width: 330px;
+  height: 350px;
+  object-fit: fill;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #555;
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  text-align: center;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 16px;
+  margin-top: -30px;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -35px;
+  padding: 2px 16px;
+}
+
+.card-rating {
+  font-size: 12px;
+  color: #555;
+}
+
+.card-time {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Media Query */
+
+@media screen and (min-width: 320px) {
+  .card {
+    width: 90vw;
+    height: 40rem;
+    margin: 4.2rem auto;
+  }
+
+  .card-image {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .card-price {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .card-rating {
+    font-size: 14px;
+    color: #555;
+    margin-top: 30px;
+  }
+
+  .card-time {
+    font-size: 14px;
+    color: #555;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .card {
+    width: 90vw;
+    height: 40rem;
+    margin: 4.2rem auto;
+  }
+
+  .card-image {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .card-price {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .card-rating {
+    font-size: 14px;
+    color: #555;
+    margin-top: 30px;
+  }
+
+  .card-time {
+    font-size: 14px;
+    color: #555;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .card {
+    width: 90vw;
+    height: 40rem;
+    margin: 4.5rem auto;
+  }
+
+  .card-image {
+    width: 90vw;
+    height: 40vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+  }
+
+  .card-price {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .card-rating {
+    font-size: 16px;
+    color: #555;
+  }
+
+  .card-time {
+    font-size: 16px;
+    color: #555;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .card {
+    width: 70vw;
+    height: 42rem;
+    margin: 4.5rem auto;
+  }
+
+  .card-image {
+    width: 70vw;
+    height: 50vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+  }
+
+  .card-price {
+    font-size: 18px;
+    color: #555;
+  }
+
+  .card-rating {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .card-time {
+    font-size: 16px;
+    color: #555;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 75vw;
+    height: 40rem;
+    margin: 5.5rem auto;
+  }
+
+  .card-image {
+    width: 75vw;
+    height: 50vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+  }
+
+  .card-price {
+    font-size: 18px;
+    color: #555;
+  }
+
+  .card-rating {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .card-time {
+    font-size: 16px;
+    color: #555;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .card {
+    width: 75vw;
+    height: 40rem;
+    margin: 5.5rem auto;
+    display: flex;
+    background: teal;
+  }
+
+  .card-image {
+    width: 75vw;
+    height: 50vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+  }
+
+  .card-price {
+    font-size: 18px;
+    color: #555;
+  }
+
+  .card-rating {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .card-time {
+    font-size: 16px;
+    color: #555;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 180vw;
+    height: 50rem;
+    margin: 5.5rem auto;
+  }
+
+  .card-image {
+    width: 80vw;
+    height: 70vh;
+  }
+
+  .card-description {
+    font-size: 14px;
+    font-weight: normal;
+    color: #555;
+  }
+
+  .card-price {
+    font-size: 18px;
+    color: #555;
+  }
+
+  .card-rating {
+    font-size: 18px;
+    color: #555;
+  }
+
+  .card-time {
+    font-size: 18px;
+    color: #555;
+  }
+}
