@@ -57,6 +57,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  margin-left: 2em;
 }
 
 .details-profile-image {
