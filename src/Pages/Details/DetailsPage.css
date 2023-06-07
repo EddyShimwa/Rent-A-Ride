@@ -102,6 +102,7 @@
   font-size: 1rem;
   margin-bottom: 0.1rem;
   margin-top: 1rem;
+  margin-left: 9em;
 }
 
 .details-page-description {
@@ -110,6 +111,7 @@
   color: #555;
   text-align: justify;
   margin-top: 0.5rem;
+  margin-left: 9em;
 }
 
 .details-read-more-icon {
