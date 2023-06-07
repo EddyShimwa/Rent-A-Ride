@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom
 import AllRides from '../../Pages/AllRides';
 import Favorites from '../../Pages/Favorite/Favorites';
 import AddRide from '../../Pages/AddRide/AddRide';
-import DeleteRide from '../../Pages/DeleteRide';
+import DeleteRide from '../../Pages/Delete/DeleteRide';
 import NotFound from '../../Pages/NotFound/NotFound';
 import Sidebar from '../../components/SideBar/Sidebar';
 import DetailsPage from '../../Pages/Details/DetailsPage';
