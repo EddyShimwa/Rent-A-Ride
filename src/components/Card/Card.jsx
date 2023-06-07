@@ -27,7 +27,7 @@ Card.propTypes = {
   description: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  rating: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
   time: PropTypes.string.isRequired,
 };
 
