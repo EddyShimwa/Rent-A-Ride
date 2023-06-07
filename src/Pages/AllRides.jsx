@@ -10,7 +10,6 @@ import Dialog from "../components/Dialog/Dialog";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import "./AllRides.css"
 
 const AllRides = () => {
 
