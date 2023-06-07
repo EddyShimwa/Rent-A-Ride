@@ -72,7 +72,7 @@ const DetailsPage = () => {
         <Link to='/'>
           <HiOutlineChevronLeft className='back-icon' />
         </Link>
-        <h2 className='details-title'>Beautiful Family Apartment</h2>
+        <h2 className='details-title'>Beautiful Family Rides</h2>
         <BsSearch className='search-icon' />
       </div>
 
