@@ -7,6 +7,7 @@ import singleRideSlice from './slices/singleRideSlice';
 import favoritesSlice from './slices/fetchFavoriteSlice';
 import addFavoriteSlice from './slices/addFavoriteSlice';
 import removeFavoriteSlice from './slices/removeFavoriteSlice';
+import deleteRidesSlice from './slices/DeleteRideSlice'
 
 const store = configureStore({
   reducer: {
@@ -18,6 +19,7 @@ const store = configureStore({
     favorites: favoritesSlice,
     addFavorite: addFavoriteSlice,
     removeFavorite: removeFavoriteSlice,
+    deleteRides: deleteRidesSlice,
   }
 });
 
