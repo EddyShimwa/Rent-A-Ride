@@ -15,8 +15,6 @@ const Register = () => {
   const [errors, setErrors] = useState([]);
   const [dialogVisible, setDialogVisible] = useState(false);
 
-  const token = localStorage.getItem('token');
-
   const user = useSelector((state) => state.register.user);
 
   const { success, error } = useSelector(selectRegisterUserState);
@@ -25,15 +23,15 @@ const Register = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (token && success) {
+    if (success) {
       setDialogVisible(false);
-      navigate('/');
+      navigate('/login');
       toast.success(`Welcome ${user.name}!`);
     } else {
       navigate('/register');
       toast.error(error);
     }
-  }, [token, navigate, success, user.name, error]);
+  }, [navigate, success, user.name, error]);
 
   const handleNameChange = (e) => {
   setName(e.target.value);

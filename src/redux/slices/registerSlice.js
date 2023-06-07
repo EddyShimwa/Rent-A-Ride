@@ -15,16 +15,12 @@ export const registerUser = createAsyncThunk(
       },
     }
    );
-   console.log(response.data.jwt);
 
    if (response.status !== 201) {
     throw new Error(response.data.error);
    }
 
-   const token = response.data.jwt;
-   localStorage.setItem("token", token);
-
-   return { user: response.data.user, jwt: token };
+   return { user: response.data.user };
   } catch (error) {
    return rejectWithValue(error.response.error);
   }
