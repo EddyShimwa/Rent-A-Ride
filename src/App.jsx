@@ -1,9 +1,8 @@
 import ProjectRouter from "./components/Router/Router"
 
-function App() {
-
+const App = () => {
   return (
-    <div className=''>
+    <div>
       <ProjectRouter />
     </div>
   )
