@@ -18,8 +18,8 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
-    - [Usage](#usage)
-    - [Run tests](#run-tests)
+    - [Run the project](#run-the-project)
+  - [⚙️ Screenshots of the App](#️-screenshots-of-the-app)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -112,6 +112,23 @@ To run this application :
 ```sh
 npm run dev
 ```
+
+## ⚙️ Screenshots of the App
+![Login](src/screenshots/Login.png)
+
+![Details](src/screenshots/Details.png)
+
+![Details](src/screenshots/details-tablet.png)
+
+![Details](src/screenshots/details-laptop.png)
+
+![Details](src/screenshots/details-larger-screen.png)
+
+![Details](src/screenshots/favorite-larger-screen.png)
+
+![Details](src/screenshots/home-mobile.png)
+
+![Details](src/screenshots/home-laptop.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
