@@ -28,7 +28,6 @@ const Favorites = () => {
       <ul className='favorite-list'>
 
         {favorites.map((item, index) => (
-          console.log('Favorites array:', favorites),
           <li key={index} className="favorite-list-item">
             <img src= {item.image} className="fav-car-image" alt="Favorite Car" />
             <h2 className="car-name">{item.name}</h2>
