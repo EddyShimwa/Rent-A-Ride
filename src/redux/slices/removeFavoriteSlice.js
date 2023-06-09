@@ -14,9 +14,7 @@ export const removeFavorite = createAsyncThunk(
       "Accept": "application/json",
      },
     }
-   );
-
-   console.log("Delete response:", response);
+   )
 
    if (response.status !== 200) {
     throw new Error(response.data.error);
