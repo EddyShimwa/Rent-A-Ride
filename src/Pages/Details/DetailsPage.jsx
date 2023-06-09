@@ -53,7 +53,7 @@ const DetailsPage = () => {
     dispatch(addFavorite(favoriteData))
       .then((response) => {
         try {
-          console.log('Favorite added successfully:', response.payload);
+          
           navigate('/favorite');
         } catch (error) {
           console.error('Failed to handle success:', error);
