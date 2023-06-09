@@ -60,7 +60,6 @@ const DetailsPage = () => {
         }
       })
       .catch((error) => {
-        console.error('Failed to add favorite:', error);
       });
   };
 
