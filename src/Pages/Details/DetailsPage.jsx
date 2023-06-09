@@ -56,7 +56,7 @@ const DetailsPage = () => {
           
           navigate('/favorite');
         } catch (error) {
-          console.error('Failed to handle success:', error);
+          
         }
       })
       .catch((error) => {
