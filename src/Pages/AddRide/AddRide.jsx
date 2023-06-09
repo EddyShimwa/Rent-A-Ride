@@ -107,7 +107,6 @@ const AddRide = () => {
 
     const user_id = user.id;
 
-    console.log(user_id);
 
     const carPayload = {
       user_id: user_id,
